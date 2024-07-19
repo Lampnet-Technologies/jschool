@@ -69,6 +69,10 @@ margin: 30px  auto;
     border-radius: 5px;
     width: 30%;
     margin-bottom: 20px;
+    transition: .3s ease;
+  }
+  .news--btn:hover{
+   box-shadow: inset 2px 2px 2px #0B6B39;
   }
   .news--link{
     color: white;

@@ -193,7 +193,7 @@ export default function HomePage() {
               gap: "2rem",
               autoplay: true,
               interval: 3000,
-              pauseOnHover: true,
+              pauseOnHover: false,
               breakpoints: {
                 768: {
                   perPage: 2,
