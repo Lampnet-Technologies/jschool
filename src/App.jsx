@@ -9,7 +9,6 @@ import Parent from "./pages/login/Parent";
 import Teacher from "./pages/login/Teacher";
 import TeachersPage from "./pages/TeachersPage";
 import Admission from "./pages/Admission";
-import Events from "./pages/Events";
 import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
@@ -27,7 +26,6 @@ export default function App() {
         <Route path="/parent" element={<Parent />} />
         <Route path="/teacher" element={<Teacher />} />
         <Route path="/teachers" element={<TeachersPage />} />
-        <Route path="/events" element={<Events />} />
         <Route path="/admission" element={<Admission />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutPage />} />

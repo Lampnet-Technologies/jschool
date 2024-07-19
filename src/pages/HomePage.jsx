@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "../components/Carousel";
 import {
   FaArrowRight,
@@ -24,8 +24,32 @@ import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import gallery from "../components/GalleryData";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import client from "../client";
 
 export default function HomePage() {
+  useEffect(() => {
+    AOS.init();
+    client
+      .fetch(
+        `*[_type == "post"] {
+          title,
+          slug,
+          body,
+          mainImage{
+            asset -> {
+              _id,
+              url
+            },
+            alt
+          }
+        }`
+      )
+      .then((data) => setPosts(data))
+      .catch(console.error);
+  }, []);
+  const [posts, setPosts] = useState([]);
   return (
     <div className="homePage pages">
       <Slider />
@@ -62,7 +86,11 @@ export default function HomePage() {
 
       <section className="about--section ">
         <div className="about--content">
-          <div className="about--text">
+          <div
+            className="about--text"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
             <div className="line"></div>
             <h1>About School</h1>
             <br />
@@ -73,12 +101,16 @@ export default function HomePage() {
               America...
             </p>
             <br />
-            <Link to='/about'>
-            <button className="btn">Learn More</button>
+            <Link to="/about">
+              <button className="btn">Learn More</button>
             </Link>
           </div>
           <br />
-          <div className="about--image">
+          <div
+            className="about--image"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
             <img src={RandomImage} className="img" alt="Image" />
             <div className="school--rating">
               <div>
@@ -99,7 +131,11 @@ export default function HomePage() {
       </section>
 
       <section className="apply--section">
-        <div className="apply--content">
+        <div
+          className="apply--content"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <h1>Apply for fall 2025</h1>
           <br />
           <p>
@@ -114,8 +150,18 @@ export default function HomePage() {
 
       <section className="principle--section">
         <div className="principal--content">
-          <img src={PrincipalImage} className="img" alt="Principal" />
-          <div className="principal--message">
+          <img
+            src={PrincipalImage}
+            className="img"
+            alt="Principal"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          />
+          <div
+            className="principal--message"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
             <div className="line"></div>
             <h1>From the Principal</h1>
             <p>
@@ -290,6 +336,53 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <section className="News--Events">
+      <div className="news--container">
+        <h1 className="news--title">School News and Events</h1>
+        <br />
+        <Splide
+          options={{
+            type: 'loop',
+            perPage: 3,
+            autoplay: true,
+            pauseOnHover: true,
+            gap: '1rem',
+            arrows: 'false',
+            breakpoints: {
+              640: {
+                perPage: 1,
+              },
+              1024: {
+                perPage: 2,
+              },
+            },
+          }}
+          aria-label="School News and Events"
+        >
+          {posts.map((post) => (
+            <SplideSlide key={post.slug.current}>
+              <article>
+                <div className="article--img">
+                  <img
+                    src={post.mainImage.asset.url}
+                    className="img"
+                    alt={post.title}
+                  />
+                </div>
+                <br />
+                <h2>{post.title}</h2>
+                <button className="news--btn">
+                  <Link className="news--link" to="/news">
+                    See More
+                  </Link>
+                </button>
+              </article>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
+    </section>
 
       <section className="community">
         <div className="community--content">

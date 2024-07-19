@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import gallery from "../components/GalleryData";
 import Footer from "../components/Footer";
 import "../css/pages.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Gallery() {
+ useEffect(()=>{
+  AOS.init()
+ })
   return (
     <div className="pages">
       <div className="gallery--page">

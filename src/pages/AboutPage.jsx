@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import "../css/pages.css";
 import RandomImage from "../assets/images/30.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutPage() {
+  useEffect(()=>{
+    AOS.init();
+  })
   return (
     <div>
       <div className="pages">
@@ -11,7 +16,8 @@ export default function AboutPage() {
           <div className="jschool--content">
             <div className="about--jschool">
               <h1>About JSchool</h1>
-              <div className="jschool--header">
+              <div className="jschool--header" data-aos="fade-right"
+     data-aos-duration="1500">
                 <div className="jschool--body">
                   <div className="line"></div>
                   <h2>JSchool</h2>
@@ -24,7 +30,8 @@ export default function AboutPage() {
                     incidunt odio sapiente!
                   </p>
                 </div>
-                <div className="jschool--img">
+                <div className="jschool--img" data-aos="fade-left"
+     data-aos-duration="1500">
                   <img src={RandomImage} className="img" alt="" />
                 </div>
               </div>

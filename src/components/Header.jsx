@@ -54,7 +54,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link className="link" to="/events" onClick={closeMenu}>
+                <Link className="link" to="/news" onClick={closeMenu}>
                   Events & News
                 </Link>
               </li>
@@ -118,7 +118,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link className="link" to="/events" onClick={closeMenu}>
+                <Link className="link" to="/news" onClick={closeMenu}>
                   Events & News
                 </Link>
               </li>
