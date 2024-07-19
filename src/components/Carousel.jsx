@@ -39,14 +39,23 @@ export default function Slider() {
                     </div>
                     <div className="carousel2">
                       <div className="play">
-                        <Link className="play--video" to="/video">
+                        <Link
+                          className="play--video"
+                          to="https://www.youtube.com/watch?v=qccyDMZASbA
+"
+                          target="_blank"
+                        >
                           <FaPlay />
                         </Link>
                       </div>
                       <div className="play-content">
                         <p>JSchool</p>
                         <h2>CAMPUS TOUR</h2>
-                        <Link to="/video">
+                        <Link
+                          to="https://www.youtube.com/watch?v=qccyDMZASbA
+"
+                          target="_blank"
+                        >
                           <p>WATCH VIDEO</p>
                         </Link>
                       </div>
