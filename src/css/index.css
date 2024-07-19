@@ -198,7 +198,6 @@ textarea {
 
 /* Hero Section */
 .slider {
-  position: relative;
   height: 80vh;
 }
 .carousel-indicators .active {

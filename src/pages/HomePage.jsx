@@ -7,7 +7,6 @@ import {
   FaGraduationCap,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
 import {
@@ -193,7 +192,7 @@ export default function HomePage() {
               gap: "2rem",
               autoplay: true,
               interval: 3000,
-              pauseOnHover: false,
+              pauseOnHover: true,
               breakpoints: {
                 768: {
                   perPage: 2,
@@ -348,7 +347,7 @@ export default function HomePage() {
             autoplay: true,
             pauseOnHover: true,
             gap: '1rem',
-            arrows: 'false',
+            arrows: false,
             breakpoints: {
               640: {
                 perPage: 1,

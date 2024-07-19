@@ -1,4 +1,8 @@
 /* Universal input styling */
+*{
+  padding: 0;
+  margin: 0;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
