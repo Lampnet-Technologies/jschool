@@ -87,9 +87,9 @@ export default function SingleNewsPage() {
                 type: 'loop',
                 perPage: 3,
                 autoplay: true,
-                pauseOnHover: true,
+                pauseOnHover: false,
                 gap: '1rem',
-                arrows: 'false',
+                arrows: false,
                 breakpoints: {
                   640: {
                     perPage: 1,
