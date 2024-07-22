@@ -233,6 +233,7 @@ textarea {
   text-align: center;
   height: 40px;
   animation: pulse 0.5s linear 2s infinite;
+  z-index: 9;
 }
 @keyframes pulse {
   0% {
