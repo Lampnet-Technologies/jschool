@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import client from "../client";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
+import Footer from "../components/Footer";
 
 export default function NewsPage() {
   const [posts, setPosts] = useState([]);
@@ -69,6 +70,7 @@ export default function NewsPage() {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

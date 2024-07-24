@@ -514,7 +514,7 @@ textarea {
   margin-bottom: 20px;
   border: 2px solid #0b6b39;
   border-radius: 8px;
-  padding: 40px;
+  padding: 40px 10px;
   text-align: center;
 }
 .news--letter--input{
@@ -523,12 +523,12 @@ textarea {
   padding: 5px;
   border: 2px solid #ff2a2a;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .news--letter--input input, button{
   outline: none;
   border: none;
-  padding: 8px;
+  padding: 5px;
 }
 .news-letter button{
   background-color: #ff2a2a;
