@@ -26,6 +26,7 @@ import gallery from "../components/GalleryData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import client from "../client";
+import Typed from "typed.js";
 
 export default function HomePage() {
   useEffect(() => {
@@ -49,38 +50,80 @@ export default function HomePage() {
       .catch(console.error);
   }, []);
   const [posts, setPosts] = useState([]);
+
+  const el = React.useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["About", "Jschool"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+  const al = React.useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(al.current, {
+      strings: ["News and Events", "Blog"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="homePage pages">
       <Slider />
+      <h4 className="intro--header">Why you should be here</h4>
       <section className="intro--section">
         <div className="edu--info1">
-          <FaGraduationCap className="grad--icon" />
+          <div className="intro--icon">
+            <FaGraduationCap className="grad--icon" />
+          </div>
           <p>
             Education in English: Cambridge International Programmed and
             qualified native English's speaking teachers.
           </p>
         </div>
         <div className="edu--info2">
-          <FaBuildingFlag className="grad--icon" />
+          <div className="intro--icon">
+            <FaBuildingFlag className="grad--icon" />
+          </div>
           <p>
             Education in English: Cambridge International Programmed and
             qualified native English's speaking teachers.
           </p>
         </div>
         <div className="edu--info3">
-          <FaNoteSticky className="grad--icon" />
+          <div className="intro--icon">
+            <FaNoteSticky className="grad--icon" />
+          </div>
           <p>
             Education in English: Cambridge International Programmed and
             qualified native English's speaking teachers.
           </p>
         </div>
         <div className="edu--info4">
-          <FaListCheck className="grad--icon" />
+          <div className="intro--icon">
+            <FaListCheck className="grad--icon" />
+          </div>
           <p>
             Education in English: Cambridge International Programmed and
             qualified native English's speaking teachers.
           </p>
         </div>
+      </section>
+
+      <section className="js--img">
+        <img src={AboutImage} alt="" />
       </section>
 
       <section className="about--section ">
@@ -91,7 +134,10 @@ export default function HomePage() {
             data-aos-duration="1500"
           >
             <div className="line"></div>
-            <h1>About School</h1>
+            <h1>
+              About <span ref={el} />
+            </h1>
+
             <br />
             <p>
               JSchool is an independent, non-governmental organisation,
@@ -101,9 +147,33 @@ export default function HomePage() {
             </p>
             <br />
             <Link to="/about">
-              <button className="btn">Learn More</button>
+              <button className="btn">Enroll now</button>
             </Link>
+            <div className="school--rating">
+              <div className="rating">
+                <div className="about--icon">
+                  <FaGraduationCap className="grad--icon" />
+                </div>
+                <h2>12+</h2>
+                <p>Teachers</p>
+              </div>
+              <div className="rating">
+                <div className="about--icon">
+                  <FaGraduationCap className="grad--icon" />
+                </div>
+                <h2>44+</h2>
+                <p>Students</p>
+              </div>
+              <div className="rating">
+                <div className="about--icon">
+                  <FaGraduationCap className="grad--icon" />
+                </div>
+                <h2>10+</h2>
+                <p>Graduates</p>
+              </div>
+            </div>
           </div>
+
           <br />
           <div
             className="about--image"
@@ -111,25 +181,11 @@ export default function HomePage() {
             data-aos-duration="1500"
           >
             <img src={RandomImage} className="img" alt="Image" />
-            <div className="school--rating">
-              <div>
-                <h2>12+</h2>
-                <p>Teachers</p>
-              </div>
-              <div>
-                <h2>44+</h2>
-                <p>Students</p>
-              </div>
-              <div>
-                <h2>10+</h2>
-                <p>Graduates</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="apply--section">
+      {/* <section className="apply--section">
         <div
           className="apply--content"
           data-aos="fade-up"
@@ -175,7 +231,7 @@ export default function HomePage() {
             <p className="school">Principle, JSchool</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="teachers">
         <div className="teachers--content">
@@ -329,59 +385,60 @@ export default function HomePage() {
             </SplideSlide>
           </Splide>
           <Link className="link" to="/teachers">
-            <button className="teachers--btn">
-              See All Our Certified Teachers
-            </button>
+            <button className="teachers--btn">See All Teachers</button>
           </Link>
         </div>
       </section>
 
       <section className="News--Events">
-      <div className="news--container">
-        <h1 className="news--title">School News and Events</h1>
-        <br />
-        <Splide
-          options={{
-            type: 'loop',
-            perPage: 3,
-            autoplay: true,
-            pauseOnHover: true,
-            gap: '1rem',
-            arrows: false,
-            breakpoints: {
-              640: {
-                perPage: 1,
+        <div className="news--container">
+          <h1 className="news--title">
+            School <span ref={al} />
+          </h1>
+          <br />
+          <Splide
+            options={{
+              type: "loop",
+              perPage: 3,
+              autoplay: true,
+              pauseOnHover: true,
+              gap: "1rem",
+              arrows: false,
+              breakpoints: {
+                640: {
+                  perPage: 1,
+                },
+                1024: {
+                  perPage: 2,
+                },
               },
-              1024: {
-                perPage: 2,
-              },
-            },
-          }}
-          aria-label="School News and Events"
-        >
-          {posts.map((post) => (
-            <SplideSlide key={post.slug.current}>
-              <article>
-                <div className="article--img">
-                  <img
-                    src={post.mainImage.asset.url}
-                    className="img"
-                    alt={post.title}
-                  />
-                </div>
-                <br />
-                <h2>{post.title}</h2>
-                <button className="news--btn">
-                  <Link className="news--link" to="/news">
-                    See More
-                  </Link>
-                </button>
-              </article>
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
-    </section>
+            }}
+            aria-label="School News and Events"
+          >
+            {posts.map((post) => (
+              <SplideSlide key={post.slug.current}>
+                <article>
+                  <div className="article--img">
+                    <img
+                      src={post.mainImage.asset.url}
+                      className="img"
+                      alt={post.title}
+                    />
+                  </div>
+                  <br />
+                  <h2>{post.title}</h2>
+                  <br />
+                  <button className="news--btn">
+                    <Link className="news--link" to="/news">
+                      See More
+                    </Link>
+                  </button>
+                </article>
+              </SplideSlide>
+            ))}
+          </Splide>
+        </div>
+      </section>
 
       <section className="community">
         <div className="community--content">

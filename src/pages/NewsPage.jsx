@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import client from "../client";
 import { Link } from "react-router-dom";
+import Typed from "typed.js";
 
 export default function NewsPage() {
   const [posts, setPosts] = useState([]);
@@ -28,10 +29,24 @@ export default function NewsPage() {
       .catch(console.error);
   }, []);
 
+  const el = React.useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['News and Events', 'Blog'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="pages">
       <div className="news--container">
-        <h1 className="news--title">School News and Events</h1>
+        <h1 className="news--title">School  <span ref={el} /></h1>
         <br />
         <div className="news">
           {posts.map((post) => (

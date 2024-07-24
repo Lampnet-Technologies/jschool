@@ -4,25 +4,33 @@ import Footer from "../components/Footer";
 import "../css/pages.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  FaArrowRight,
-  FaFacebook,
-  FaGooglePlusG,
-  FaGraduationCap,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa";
+import Typed from "typed.js";
+
 
 export default function TeachersPage() {
+
   useEffect(() => {
     AOS.init();
   }, []);
+  const el = React.useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['About', 'Teachers'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+  
   return (
     <div className="pages">
       <div className="teachers--page">
         <div className="teachers--page--content">
-          <h1>Our Teachers</h1>
+          <h1>Our <span ref={el}/></h1>
           <div
             className="teachers--page--details"
             data-aos="zoom-in"

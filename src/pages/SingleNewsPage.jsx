@@ -30,7 +30,6 @@ export default function SingleNewsPage() {
   }, [slug]);
 
   useEffect(() => {
-    // Fetch additional posts for the slider
     client
       .fetch(
         `*[_type == "post"] {
