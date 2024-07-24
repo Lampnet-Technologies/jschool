@@ -523,7 +523,7 @@ textarea {
   padding: 5px;
   border: 2px solid #ff2a2a;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .news--letter--input input, button{
   outline: none;
