@@ -5,6 +5,7 @@
 }
 .pages {
   padding: 78px 0 0;
+  overflow: hidden;
 }
 body {
   font-family: "Poppins", sans-serif;
