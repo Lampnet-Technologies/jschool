@@ -521,10 +521,9 @@ textarea {
 .news--letter--input{
   background-color: white;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 0;
   border: 2px solid #ff2a2a;
   display: flex;
-  justify-content: space-between;
 }
 .news--letter--input input, button{
   outline: none;
