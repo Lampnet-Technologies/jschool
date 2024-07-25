@@ -9,6 +9,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  /* background-color: #B8D1C2; */
 }
 ul {
   list-style: none;
@@ -68,6 +69,31 @@ input {
 textarea {
   caret-color: #ff2a2a;
 }
+.scroll--up{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 88;
+}
+.scroll--up button{
+  color: white;
+  background-color: #ff2a2a;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  animation: bounce linear 2s infinite;
+}
+@keyframes bounce {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 
 /* Header styling */
 .header--wrapper {
@@ -109,9 +135,15 @@ textarea {
 .login h4 {
   color: #ff2a2a;
   cursor: pointer;
+  font-size: 21px;
 }
 
 /* Login Links styling */
+.login {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
 .login--links {
   position: absolute;
   right: 0;
@@ -132,6 +164,16 @@ textarea {
 }
 .login--links .link:hover {
   color: #0b6b39;
+}
+.enroll--btn button {
+  background-color: #0b6b39;
+  padding: 8px;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+}
+.enroll--btn .link {
+  color: white;
 }
 /* NavBar Links styling */
 .desktop {
@@ -219,6 +261,9 @@ textarea {
 .carousel1 {
   text-align: left;
 }
+.carousel1 button{
+  width: 20% !important;
+}
 .carousel2 {
   text-align: left;
   display: flex;
@@ -272,6 +317,24 @@ textarea {
 .play--video {
   text-decoration: none;
   color: white;
+}
+.hero--btn .link {
+  margin-right: 10px;
+}
+.hero--btn .button-1 {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #0b6b39;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+  margin-bottom: 30px;
+}
+.hero--btn .button-1:hover {
+  background-color: white;
+  color: #0b6b39;
 }
 
 /* Introduction Section */
@@ -328,6 +391,20 @@ textarea {
 .rating .grad--icon {
   color: #ff2a2a;
 }
+.about--image{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.about--image .img-1{
+  grid-row: 1 /span 2;
+  grid-column: 1 /span 2;
+  width: 50%;
+  margin: auto;
+}
+.about--text button{
+  width: 20%;
+}
 /* .about--icon {
   background-color: #b8d1c2;
   border-radius: 100%;
@@ -362,6 +439,29 @@ textarea {
   color: #ff2a2a;
 } */
 
+/* Parent Corner Section */
+.parents--corner{
+  background-color: #e8edea;
+  padding: 50px 0;
+}
+.parents--container {
+  width: 90%;
+  margin: auto;
+}
+.parent--content {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  margin: -10px auto 20px;
+}
+.parents--container img {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: auto;
+  display: block;
+}
 /* Teachers Section */
 .teachers--content {
   width: 90%;
@@ -420,7 +520,7 @@ textarea {
   color: #0b6b39;
 }
 /* Community Section */
-.line-2 {
+/* .line-2 {
   width: 100px;
   height: 3px;
   background-color: white;
@@ -456,23 +556,25 @@ textarea {
 }
 .community--icon:hover {
   transform: translateY(-10px);
-}
+} */
 /* Gallery Section */
 .gallery--container {
   width: 90%;
   margin: 40px auto;
 }
-.gallery--header {
-  display: flex;
-  justify-content: space-between;
-}
 .gallery--header p {
   color: #ff2a2a;
   font-size: 18px;
 }
+.gallery--img{
+  margin-top: 20px;
+}
+.gallery--img img{
+  margin-bottom: 20px;
+}
 /* Footer Section */
 .footer {
-  background-color: #B8D1C2;
+  background-color: #b8d1c2;
   color: black;
 }
 .footer--container {
@@ -480,7 +582,7 @@ textarea {
   margin: auto;
   padding: 40px 0;
 }
-.footer--logo{
+.footer--logo {
   width: 50px;
 }
 .footer--links {
@@ -511,26 +613,33 @@ textarea {
 .footer--icons .school--socials:hover {
   transform: translateY(-7px);
 }
-.news-letter{
+.news-letter {
   margin-bottom: 20px;
   border: 2px solid #0b6b39;
   border-radius: 8px;
   padding: 40px 10px;
   text-align: center;
 }
-.news--letter--input{
+.news--letter--input {
   background-color: white;
   border-radius: 10px;
-  padding: 5px 0;
+  padding: 5px;
   border: 2px solid #ff2a2a;
+  gap: 10px;
+  width: 80%;
+  margin: auto;
   display: flex;
 }
-.news--letter--input input, button{
+.news--letter--input input,
+button {
   outline: none;
   border: none;
   padding: 5px;
 }
-.news-letter button{
+.news--letter--input input{
+  width: 80%;
+}
+.news-letter button {
   background-color: #ff2a2a;
   color: white;
   border-radius: 5px;
@@ -644,6 +753,11 @@ textarea {
     gap: 50px;
     align-items: center;
   }
+  /* Parents corner section */
+  .parent--card--wrapper {
+    display: flex;
+    gap: 20px;
+  }
   /* Teachers Section */
   .teachers--btn {
     outline: none;
@@ -651,11 +765,9 @@ textarea {
     border: none;
     background-color: #0b6b39;
     color: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 30%;
     display: block;
     transition: 0.3s ease;
+    width: 12%;
   }
   .teacher--socials {
     height: 76% !important;
@@ -703,6 +815,10 @@ textarea {
   .footer--content p {
     font-size: 21px;
   }
+  .vital--links{
+    display: flex;
+    gap: 70px;
+  }
 }
 
 /* Tablet View */
@@ -735,10 +851,6 @@ textarea {
     justify-content: space-around;
     margin-top: 170px;
   }
-  /* Teachers Section */
-  .teachers--btn {
-    width: 40%;
-  }
   .teacher--socials {
     height: 58%;
   }
@@ -746,5 +858,10 @@ textarea {
   .gallery--img {
     display: flex;
     gap: 20px;
+  }
+  /* Footer Section */
+  .vital--links{
+    display: flex;
+    gap: 70px;
   }
 }

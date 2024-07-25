@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "../components/Carousel";
 import {
   FaArrowRight,
+  FaArrowUp,
   FaFacebook,
   FaGooglePlusG,
   FaGraduationCap,
@@ -29,6 +30,26 @@ import client from "../client";
 import Typed from "typed.js";
 
 export default function HomePage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   useEffect(() => {
     AOS.init();
     client
@@ -81,6 +102,7 @@ export default function HomePage() {
 
   return (
     <div className="homePage pages">
+      
       <Slider />
       <h4 className="intro--header">Why you should be here</h4>
       <section className="intro--section">
@@ -180,11 +202,13 @@ export default function HomePage() {
             data-aos="fade-left"
             data-aos-duration="1500"
           >
+            <img src={RandomImage} className="img img-1" alt="Image" />
+            <img src={RandomImage} className="img" alt="Image" />
             <img src={RandomImage} className="img" alt="Image" />
           </div>
         </div>
       </section>
-
+      <br />
       {/* <section className="apply--section">
         <div
           className="apply--content"
@@ -378,7 +402,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="splide--text">
+              <div classNam e="splide--text">
                 <h4>John Doe</h4>
                 <p>Teacher</p>
               </div>
@@ -389,6 +413,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <br />
 
       <section className="News--Events">
         <div className="news--container">
@@ -440,7 +466,60 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="community">
+      <section className="parents--corner">
+        <div className="parents--container">
+          <div className="parent--header">
+            <div className="line"></div>
+            <h4>Parent’s Corner</h4>
+          </div>
+          <div className="parent--card--wrapper">
+            <div className="parent--card">
+              <div className="parent--img">
+                <img src={RandomImage} alt="" className="img" />
+              </div>
+              <div className="parent--content">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Possimus corporis eveniet eaque non itaque unde nisi,
+                  recusandae error sapiente sint. Quae error perferendis harum
+                  labore cumque, incidunt eos nisi asperiores!
+                </p>
+                <h4>John Doe</h4>
+              </div>
+            </div>
+            <div className="parent--card">
+              <div className="parent--img">
+                <img src={RandomImage} alt="" className="img" />
+              </div>
+              <div className="parent--content">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Possimus corporis eveniet eaque non itaque unde nisi,
+                  recusandae error sapiente sint. Quae error perferendis harum
+                  labore cumque, incidunt eos nisi asperiores!
+                </p>
+                <h4>John Doe</h4>
+              </div>
+            </div>
+            <div className="parent--card">
+              <div className="parent--img">
+                <img src={RandomImage} alt="" className="img" />
+              </div>
+              <div className="parent--content">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Possimus corporis eveniet eaque non itaque unde nisi,
+                  recusandae error sapiente sint. Quae error perferendis harum
+                  labore cumque, incidunt eos nisi asperiores!
+                </p>
+                <h4>John Doe</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="community">
         <div className="community--content">
           <div className="community--background">
             <div className="line-2"></div>
@@ -455,18 +534,13 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="gallery">
         <div className="gallery--container">
           <div className="line"></div>
           <div className="gallery--header">
             <h4>JSchool's Gallery</h4>
-            <Link to="/gallery" className="link">
-              <p>
-                See More <FaArrowRight />
-              </p>
-            </Link>
           </div>
           <div className="gallery--img">
             {gallery.slice(0, 3).map((gallery) => (
@@ -477,9 +551,19 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+        <Link className="link" to="/gallery">
+          <button className="teachers--btn">See All</button>
+        </Link>
       </section>
 
       <Footer />
+      <div className="scroll--up">
+        {isVisible && (
+          <button onClick={scrollToTop}>
+            <FaArrowUp />
+          </button>
+        )}
+      </div>
     </div>
   );
 }

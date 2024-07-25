@@ -33,9 +33,14 @@ export default function Slider() {
                         JSchool graduates are studying in the world's most
                         prestigious universities.
                       </p>
-                      <Link to="/admission">
-                        <button className="btn-2">Apply Now</button>
+                      <div className="hero--btn">
+                      <Link to="/admission" className="link">
+                        <button className="btn-2 button-1">Enroll Now</button>
                       </Link>
+                      <Link to="/gallery" className="link">
+                        <button className="btn-2">Take a Tour</button>
+                      </Link>
+                      </div>
                     </div>
                     <div className="carousel2">
                       <div className="play">

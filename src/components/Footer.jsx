@@ -98,19 +98,35 @@ export default function Footer() {
           <br />
           <div className="footer--content">
             <h2>Vital Links</h2>
+            <div className="vital--links">
             <div className="footer--links">
               <Link to="/" className="links">
                 Home
               </Link>
               <Link to="/about" className="links">
-                About JSchool
+                About
               </Link>
+              <Link to="/contact" className="links">
+                Contact
+              </Link>
+              <Link to="/gallery" className="links">
+                Gallery
+              </Link>
+            </div>
+            <div className="footer--links">
               <Link to="/admission" className="links">
                 Admission
               </Link>
-              <Link to="/news" className="links">
-                News
+              <Link to="/career" className="links">
+                Career
               </Link>
+              <Link to="/news" className="links">
+                News & Events
+              </Link>
+              <Link to="/teachers" className="links">
+                Teachers
+              </Link>
+            </div>
             </div>
           </div>
           <br />

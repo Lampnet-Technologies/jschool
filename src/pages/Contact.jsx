@@ -90,7 +90,8 @@ export default function Contact() {
           <div className="contact--container">
             <div className="contact--address">
               <div className="contact--text">
-                <h1>Contact</h1>
+                <div className="line"></div>
+                <h4>Contact</h4>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Doloremque voluptate assumenda vel autem a nesciunt quo sequi,
@@ -119,8 +120,8 @@ export default function Contact() {
             </div>
 
             <div className="contact--message">
-              <div className="line"></div>
-              <h1>Message Us</h1>
+              {/* <div className="line"></div> */}
+              <h4 className="contact--header">You can also reach us by filling this form</h4>
               <form onSubmit={handleSubmit}>
                 <div className="name--email">
                   <div className="input">

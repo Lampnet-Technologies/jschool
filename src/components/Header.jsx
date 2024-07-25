@@ -96,6 +96,13 @@ export default function Header() {
                 </li>
               </ul>
             )}
+          <div className="enroll--btn">
+            <button>
+              <Link to='/admission' className="link">
+              Enroll
+              </Link>
+            </button>
+          </div>
           </div>
         </div>
         {/* Mobile view navBar */}
