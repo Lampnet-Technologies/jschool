@@ -28,6 +28,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import client from "../client";
 import Typed from "typed.js";
+import BlockContent from "@sanity/block-content-to-react";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -102,7 +103,6 @@ export default function HomePage() {
 
   return (
     <div className="homePage pages">
-      
       <Slider />
       <h4 className="intro--header">Why you should be here</h4>
       <section className="intro--section">
@@ -453,12 +453,17 @@ export default function HomePage() {
                   </div>
                   <br />
                   <h2>{post.title}</h2>
+                  <div className="body">
+                    <BlockContent
+                      blocks={post.body}
+                      projectId="qdccjb4j"
+                      dataset="production"
+                    />
+                  </div>
                   <br />
-                  <button className="news--btn">
-                    <Link className="news--link" to="/news">
-                      See More
-                    </Link>
-                  </button>
+                  <Link className="news--link" to={'/news'}>
+                  See More <FaArrowRight/>
+                </Link>
                 </article>
               </SplideSlide>
             ))}

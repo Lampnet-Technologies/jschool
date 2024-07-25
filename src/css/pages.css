@@ -67,20 +67,8 @@ margin: 30px  auto;
   .singleNews--content img{
     border-radius: 8px;
   }
-  .news--btn{
-    border: none;
-    background-color: #0B6B39;
-    padding: 8px;
-    border-radius: 5px;
-    width: 50%;
-    margin-bottom: 20px;
-    transition: .3s ease;
-  }
-  .news--btn:hover{
-   box-shadow: inset 2px 2px 2px #0B6B39;
-  }
   .news--link{
-    color: white;
+    color: #ff2a2a;
     text-decoration: none;
     cursor: pointer;
   }

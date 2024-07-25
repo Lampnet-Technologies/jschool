@@ -4,6 +4,7 @@ import client from "../client";
 import BlockContent from "@sanity/block-content-to-react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function SingleNewsPage() {
   const [singleNewsPost, setSingleNewsPost] = useState(null);
@@ -71,11 +72,9 @@ export default function SingleNewsPage() {
               dataset="production"
             />
           </div>
-          <button className="news--btn">
-            <Link to="/news" className="news--link">
-              Read More News
-            </Link>
-          </button>
+          <Link to="/news" className="news--link">
+            <FaArrowLeft /> Back
+          </Link>
         </section>
         <section className="News--Events">
           <div className="news--container">
@@ -83,11 +82,11 @@ export default function SingleNewsPage() {
             <br />
             <Splide
               options={{
-                type: 'loop',
+                type: "loop",
                 perPage: 3,
                 autoplay: true,
                 pauseOnHover: false,
-                gap: '1rem',
+                gap: "1rem",
                 arrows: false,
                 breakpoints: {
                   640: {
@@ -112,11 +111,12 @@ export default function SingleNewsPage() {
                     </div>
                     <br />
                     <h2>{post.title}</h2>
-                    <button className="news--btn">
-                      <Link className="news--link" to='/news'>
-                        See More
-                      </Link>
-                    </button>
+                    <Link
+                      className="news--link"
+                      to={`/news/${post.slug.current}`}
+                    >
+                      See More <FaArrowRight />
+                    </Link>
                   </article>
                 </SplideSlide>
               ))}

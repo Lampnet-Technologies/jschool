@@ -5,6 +5,8 @@ import client from "../client";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
 import Footer from "../components/Footer";
+import BlockContent from "@sanity/block-content-to-react";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function NewsPage() {
   const [posts, setPosts] = useState([]);
@@ -58,14 +60,19 @@ export default function NewsPage() {
                   className="img"
                   alt={post.title}
                 />
+                 <div className="body">
+                    <BlockContent
+                      blocks={post.body}
+                      projectId="qdccjb4j"
+                      dataset="production"
+                    />
+                  </div>
               </div>
               <br />
               <h2>{post.title}</h2>
-              <button className="news--btn">
                 <Link className="news--link" to={`/news/${post.slug.current}`}>
-                  See More
+                  See More <FaArrowRight/>
                 </Link>
-              </button>
             </article>
           ))}
         </div>
