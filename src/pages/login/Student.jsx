@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
   const [form, setForm] = useState({ name: "", password: "", checkbox: true });
@@ -89,6 +91,7 @@ const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
           Don't have an account? <Link>sign up</Link>
         </p>
       </div>
+      <ToastContainer />
     </div>
   );
 };

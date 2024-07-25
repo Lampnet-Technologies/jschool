@@ -336,6 +336,12 @@ textarea {
   background-color: white;
   color: #0b6b39;
 }
+.hero--btn{
+  display: flex;
+}
+.hero--btn button{
+  width: 100% !important;
+}
 
 /* Introduction Section */
 .intro--header {
@@ -372,7 +378,7 @@ textarea {
 .js--img img {
   width: 100%;
   margin-top: 30px;
-  height: 650px;
+  height: 500px;
 }
 /* About Section */
 .about--section {
@@ -403,7 +409,7 @@ textarea {
   margin: auto;
 }
 .about--text button{
-  width: 20%;
+  width: 30%;
 }
 /* .about--icon {
   background-color: #b8d1c2;
@@ -447,6 +453,9 @@ textarea {
 .parents--container {
   width: 90%;
   margin: auto;
+}
+.parent--header{
+  margin-bottom: 20px;
 }
 .parent--content {
   background-color: white;
@@ -510,7 +519,7 @@ textarea {
   color: white;
   padding: 10px;
   margin: 20px auto;
-  width: 30%;
+  width:40%;
   display: block;
   transition: 0.3s ease;
 }
@@ -760,14 +769,7 @@ button {
   }
   /* Teachers Section */
   .teachers--btn {
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    background-color: #0b6b39;
-    color: white;
-    display: block;
-    transition: 0.3s ease;
-    width: 12%;
+    width: 20%;
   }
   .teacher--socials {
     height: 76% !important;
