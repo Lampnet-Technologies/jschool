@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
   const [form, setForm] = useState({ name: "", password: "", checkbox: true });
@@ -19,10 +21,29 @@ const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
     e.preventDefault();
     if (!form.name || !form.password) {
       setError("Please enter both name and password.");
+      toast.error("Please enter both name and password.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
       return;
+    } else {
+      setError(null);
+      toast.success("Welcome back!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
-
   useEffect(() => {
     if (error) {
       const timer = setTimeout(() => {
@@ -66,11 +87,8 @@ const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
               onChange={handleChange}
             />
           </div>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          <br />
-          <button type="submit" className="login--btn">
-            Login
-          </button>
+        <br />
+          <button type="submit" className="login--btn">Login</button>
         </form>
         <br />
         <div className="recover--container">
@@ -91,6 +109,7 @@ const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
           Don't have an account? <Link>sign up</Link>
         </p>
       </div>
+      <ToastContainer />
     </div>
   );
 };

@@ -21,10 +21,33 @@ const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
     e.preventDefault();
     if (!form.name || !form.password) {
       setError("Please enter both name and password.");
+      toast.error("Please enter both name and password.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
       return;
+    } else {
+      setError(null);
+      toast.success("Welcome back!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
     }
+    setForm({
+      name: "",
+      password: "",
+    });
   };
-
   useEffect(() => {
     if (error) {
       const timer = setTimeout(() => {
@@ -68,7 +91,6 @@ const Login = ({ setIsLoggedIn, setIsSigningUp }) => {
               onChange={handleChange}
             />
           </div>
-          {error && <p style={{ color: "red" }}>{error}</p>}
         <br />
           <button type="submit" className="login--btn">Login</button>
         </form>
