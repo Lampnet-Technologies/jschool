@@ -5,6 +5,7 @@ import JschLogo from "../assets/images/Jsch Logo.png";
 export default function Header() {
   const [showLogin, setShowLogin] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -13,11 +14,15 @@ export default function Header() {
   const closeMenu = () => {
     setShowLogin(false);
     setIsMenuOpen(false);
+    setShowMore(false)
   };
 
   const toggleLogin = () => {
     setShowLogin(!showLogin);
   };
+  const handleShowMore = () => {
+    setShowMore(!showMore)
+  }
 
   return (
     <div className="header--wrapper">
@@ -39,18 +44,14 @@ export default function Header() {
           <nav>
             <ul className="desktop">
               <li>
-                <Link className="link" to="/" onClick={closeMenu}>
-                  Home
-                </Link>
-              </li>
-              <li>
                 <Link className="link" to="/about" onClick={closeMenu}>
                   About
                 </Link>
               </li>
+
               <li>
-                <Link className="link" to="/teachers" onClick={closeMenu}>
-                  Teachers
+                <Link className="link" to="/admission" onClick={closeMenu}>
+                  Admission
                 </Link>
               </li>
               <li>
@@ -58,21 +59,32 @@ export default function Header() {
                   Events & News
                 </Link>
               </li>
-              <li>
-                <Link className="link" to="/gallery" onClick={closeMenu}>
-                  Gallery
-                </Link>
-              </li>
+
               <li>
                 <Link className="link" to="/contact" onClick={closeMenu}>
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link className="link" to="/admission" onClick={closeMenu}>
-                  Admission
-                </Link>
-              </li>
+              <li onClick={handleShowMore}>More</li>
+              {showMore && (
+                <ul className="showMore">
+                  <li>
+                    <Link className="link" to="/gallery" onClick={closeMenu}>
+                      Gallery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="link" to="/teachers" onClick={closeMenu}>
+                      Teachers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="link" to="/" onClick={closeMenu}>
+                      Home
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </ul>
           </nav>
           <div className="login">
@@ -96,52 +108,52 @@ export default function Header() {
                 </li>
               </ul>
             )}
-          <div className="enroll--btn">
-            <button>
-              <Link to='/admission' className="link">
-              Enroll
-              </Link>
-            </button>
-          </div>
+            <div className="enroll--btn">
+              <button>
+                <Link to="/admission" className="link">
+                  Enroll
+                </Link>
+              </button>
+            </div>
           </div>
         </div>
         {/* Mobile view navBar */}
         {isMenuOpen && (
           <nav>
             <ul className="nav--links mobile">
-              <li>
+              {/* <li>
                 <Link className="link" to="/" onClick={closeMenu}>
                   Home
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link className="link" to="/about" onClick={closeMenu}>
                   About
                 </Link>
               </li>
               <li>
+                <Link className="link" to="/admission" onClick={closeMenu}>
+                  Admission
+                </Link>
+              </li>
+              {/* <li>
                 <Link className="link" to="/teachers" onClick={closeMenu}>
                   Teachers
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link className="link" to="/news" onClick={closeMenu}>
                   Events & News
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link className="link" to="/gallery" onClick={closeMenu}>
                   Gallery
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link className="link" to="/contact" onClick={closeMenu}>
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link className="link" to="/admission" onClick={closeMenu}>
-                  Admission
                 </Link>
               </li>
             </ul>

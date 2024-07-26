@@ -237,6 +237,16 @@ textarea {
   text-align: center;
 }
 
+/* Show more Btn styling */
+.showMore{
+  position: absolute;
+  background-color: white;
+  width: 30%;
+  top: 82px;
+  right: 0;
+  height: 200px;
+}
+
 /* HomePage */
 
 /* Hero Section */

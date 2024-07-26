@@ -194,7 +194,7 @@ margin: 30px  auto;
 }
 .contact--container button {
   outline: none;
-  width: 20%;
+  width: 50%;
   padding: 8px;
   border-radius: 5px;
   background-color: white;
@@ -332,6 +332,9 @@ margin: 30px  auto;
   }
   .contact--message {
     margin-top: 40px;
+  }
+  .contact--container button{
+    width: 30%;
   }
   .name--email {
     display: flex;
