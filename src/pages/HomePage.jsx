@@ -574,7 +574,8 @@ export default function HomePage() {
       <section className="community">
         <div className="community--content">
           <div className="community--background">
-            <div className="community--news-letter">
+            <div className="community--news-letter" data-aos="fade-right"
+            data-aos-duration="1500">
               <h4>Subscribe to Our Newsletter</h4>
               <p>For latest news about school and more</p>
               <form className="news--letter--input" onSubmit={handleSubmit}>
@@ -589,7 +590,8 @@ export default function HomePage() {
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
             <br />
-            <div className="community--info">
+            <div className="community--info" data-aos="fade-left"
+            data-aos-duration="1500">
               <div className="line-2"></div>
               <h2>The School Community</h2>
               <p>Share your school pride with the world!</p>
