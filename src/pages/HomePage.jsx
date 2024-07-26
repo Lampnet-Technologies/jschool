@@ -29,6 +29,8 @@ import "aos/dist/aos.css";
 import client from "../client";
 import Typed from "typed.js";
 import BlockContent from "@sanity/block-content-to-react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -100,6 +102,51 @@ export default function HomePage() {
       typed.destroy();
     };
   }, []);
+
+  /* News Letter */
+
+  const [newsLetter, setNewsLetter] = useState({
+    email: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewsLetter((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+    setErrors({
+      ...errors,
+      [name]: "",
+    });
+  };
+
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formErrors = validate();
+    if (Object.keys(formErrors).length === 0) {
+      toast.success("Subscribed successfully!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+
+      setNewsLetter({
+        email: "",
+      });
+      setErrors({});
+    } else {
+      setErrors(formErrors);
+    }
+  };
 
   return (
     <div className="homePage pages">
@@ -225,7 +272,7 @@ export default function HomePage() {
             <button className="btn-2">Apply Now</button>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       <section className="principle--section">
         <div className="principal--content">
@@ -255,7 +302,7 @@ export default function HomePage() {
             <p className="school">Principle, JSchool</p>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="teachers">
         <div className="teachers--content">
@@ -461,9 +508,9 @@ export default function HomePage() {
                     />
                   </div>
                   <br />
-                  <Link className="news--link" to={'/news'}>
-                  See More <FaArrowRight/>
-                </Link>
+                  <Link className="news--link" to={"/news"}>
+                    See More <FaArrowRight />
+                  </Link>
                 </article>
               </SplideSlide>
             ))}
@@ -524,22 +571,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* <section className="community">
+      <section className="community">
         <div className="community--content">
           <div className="community--background">
-            <div className="line-2"></div>
-            <h2>The School Community</h2>
-            <p>Share your school pride with the world!</p>
-            <div className="community--socials">
-              <FaFacebook className="community--icon" />
-              <FaLinkedin className="community--icon" />
-              <FaX className="community--icon" />
-              <FaYoutube className="community--icon" />
-              <FaGooglePlusG className="community--icon" />
+            <div className="community--news-letter">
+              <h4>Subscribe to Our Newsletter</h4>
+              <p>For latest news about school and more</p>
+              <form className="news--letter--input" onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  value={newsLetter.email}
+                />
+                <button type="submit">Subscribe</button>
+              </form>
+              {errors.email && <p className="error">{errors.email}</p>}
+            </div>
+            <br />
+            <div className="community--info">
+              <div className="line-2"></div>
+              <h2>The School Community</h2>
+              <p>Share your school pride with the world!</p>
+              <div className="community--socials">
+                <FaFacebook className="community--icon" />
+                <FaLinkedin className="community--icon" />
+                <FaX className="community--icon" />
+                <FaYoutube className="community--icon" />
+                <FaGooglePlusG className="community--icon" />
+              </div>
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="gallery">
         <div className="gallery--container">

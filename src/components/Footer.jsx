@@ -25,7 +25,7 @@ export default function Footer() {
     if (!/\S+@\S+\.\S+/.test(newsLetter.email)) {
       formErrors.email = "Please provide a valid email address";
     }
-    return formErrors; 
+    return formErrors;
   };
 
   const handleSubmit = (e) => {
@@ -86,8 +86,8 @@ export default function Footer() {
             <br />
             <div className="footer--location">
               <p>
-                <FaLocationDot /> 1, Jenny school road, Ekete, Delta
-                State, Nigeria.
+                <FaLocationDot /> 1, Jenny school road, Ekete, Delta State,
+                Nigeria.
               </p>
               <p>
                 <FaPhoneAlt /> +234 09069417489
@@ -99,34 +99,34 @@ export default function Footer() {
           <div className="footer--content">
             <h2>Vital Links</h2>
             <div className="vital--links">
-            <div className="footer--links">
-              <Link to="/" className="links">
-                Home
-              </Link>
-              <Link to="/about" className="links">
-                About
-              </Link>
-              <Link to="/contact" className="links">
-                Contact
-              </Link>
-              <Link to="/gallery" className="links">
-                Gallery
-              </Link>
-            </div>
-            <div className="footer--links">
-              <Link to="/admission" className="links">
-                Admission
-              </Link>
-              <Link to="/career" className="links">
-                Career
-              </Link>
-              <Link to="/news" className="links">
-                News & Events
-              </Link>
-              <Link to="/teachers" className="links">
-                Teachers
-              </Link>
-            </div>
+              <div className="footer--links">
+                <Link to="/" className="links">
+                  Home
+                </Link>
+                <Link to="/about" className="links">
+                  About
+                </Link>
+                <Link to="/contact" className="links">
+                  Contact
+                </Link>
+                <Link to="/gallery" className="links">
+                  Gallery
+                </Link>
+              </div>
+              <div className="footer--links">
+                <Link to="/admission" className="links">
+                  Admission
+                </Link>
+                <Link to="/career" className="links">
+                  Career
+                </Link>
+                <Link to="/news" className="links">
+                  News & Events
+                </Link>
+                <Link to="/teachers" className="links">
+                  Teachers
+                </Link>
+              </div>
             </div>
           </div>
           <br />
@@ -144,7 +144,7 @@ export default function Footer() {
                 />
                 <button type="submit">Subscribe</button>
               </form>
-                {errors.email && <p className="error">{errors.email}</p>}
+              {errors.email && <p className="error">{errors.email}</p>}
             </div>
             <div className="footer--socials">
               <h2>Follow Us</h2>

@@ -432,7 +432,7 @@ textarea {
 } */
 
 /* Principal Section */
-/* .principle--section {
+.principle--section {
   width: 90%;
   margin: 50px auto;
 }
@@ -443,7 +443,7 @@ textarea {
 }
 .school {
   color: #ff2a2a;
-} */
+}
 
 /* Parent Corner Section */
 .parents--corner{
@@ -529,7 +529,7 @@ textarea {
   color: #0b6b39;
 }
 /* Community Section */
-/* .line-2 {
+.line-2 {
   width: 100px;
   height: 3px;
   background-color: white;
@@ -538,10 +538,10 @@ textarea {
 .community--background {
   text-align: center;
   margin-bottom: 30px;
-  padding-top: 80px;
-  height: 400px;
+  padding: 80px 0 30px;
+  height: auto;
   color: white;
-  background: linear-gradient(#8e4926, rgba(255, 42, 42, 0.7));
+  background: linear-gradient(#26a9e6, #46ba7e);
 }
 .community--background p {
   font-size: 20px;
@@ -565,7 +565,25 @@ textarea {
 }
 .community--icon:hover {
   transform: translateY(-10px);
-} */
+}
+.community--news-letter{
+  border: 5px solid #8e4926;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+.community--news-letter button{
+  background-color: #0b6b39;
+  color: white;
+  border-radius: 5px;
+  transition: .3s ease;
+}
+.community--news-letter button:hover{
+ border: 2px solid #0b6b39;
+ background-color: white;
+ color: #0b6b39;
+}
 /* Gallery Section */
 .gallery--container {
   width: 90%;
@@ -748,19 +766,30 @@ button {
   }
 
   /* Apply Section */
-  .apply--content p {
+  /* .apply--content p {
     font-size: 21px;
     margin-bottom: 20px;
   }
   .apply--content {
     width: 50%;
-  }
+  } */
   /* Principal Section */
   .principal--content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     align-items: center;
+  }
+  /* Community Section */
+  .community--background{
+    display: flex;
+    padding: 80px;
+  }
+  .community--news-letter{
+    width: 40%;
+  }
+  .community--info{
+    width: 40%;
   }
   /* Parents corner section */
   .parent--card--wrapper {
@@ -778,31 +807,11 @@ button {
   .gallery--img {
     display: flex;
     gap: 20px;
+    align-items: center;
   }
   .gallery--img img {
     border-radius: 8px;
     margin-bottom: 10px;
-  }
-  /* Community Section */
-  .community--background {
-    padding-top: 100px;
-  }
-  .community--background p {
-    font-size: 27px;
-  }
-  .community--background h2 {
-    font-size: 50px;
-  }
-  .community--content {
-    background: url("../assets/images/34.jpg");
-    background-size: cover;
-  }
-  .community--socials {
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-top: 50px;
   }
   /* Footer Section */
   .footer--container {
