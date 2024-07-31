@@ -20,7 +20,7 @@ export default function Slider() {
             />
           }
         >
-          {[SliderImage4, SliderImage1, SliderImage2, SliderImage3].map(
+          {[SliderImage4, SliderImage1, SliderImage3].map(
             (image, index) => (
               <Carousel.Item key={index}>
                 <img src={image} alt={`Slider image ${index + 1}`} />

@@ -134,6 +134,7 @@ textarea {
 .login h4 {
   color: #ff2a2a;
   cursor: pointer;
+  text-decoration: underline;
   font-size: 21px;
 }
 
@@ -259,7 +260,7 @@ color: #ff2a2a !important;
   height: 80vh;
 }
 .carousel-indicators .active {
-  background-color: #ff2a2a;
+  background-color: #0b6b39;
 }
 .slider img {
   width: 100%;
