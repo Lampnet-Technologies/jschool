@@ -475,6 +475,7 @@ textarea {
   object-fit: cover;
   margin: auto;
   display: block;
+  border: 3px solid #ff2a2a;
 }
 /* Teachers Section */
 .teachers--content {
@@ -532,6 +533,9 @@ textarea {
   background-color: white;
   border: 2px solid #0b6b39;
   color: #0b6b39;
+}
+.splide--text{
+  color: black;
 }
 /* Community Section */
 .line-2 {

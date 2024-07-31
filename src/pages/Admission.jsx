@@ -214,9 +214,9 @@ export default function Admission() {
               
               <div className="steps">
                 <h2>3 key steps to join our school</h2>
-                <p><FaPenToSquare/> Fill the application form below</p>
-                <p><FaEnvelope/> Check your email for application details</p>
-                <p><FaPenToSquare/> Write our entrance examination</p>
+                <p><FaPenToSquare className="admission--icon"/> Fill the application form below</p>
+                <p><FaEnvelope className="admission--icon"/> Check your email for application details</p>
+                <p><FaPenToSquare className="admission--icon"/> Write our entrance examination</p>
               </div>
             </div>
           </div>

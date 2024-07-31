@@ -34,7 +34,7 @@ h1 {
   margin-bottom: 20px;
 }
 .about--gallery {
-  width: 50%;
+  width: 60%;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -59,11 +59,11 @@ h1 {
   background: url(/src/assets/images/43.png);
   background-size: cover;
   background-position: center;
-  height: 320px;
+  height: 350px;
 }
 .vision--overlay {
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(11, 107, 57, 0.8));
-  height: 320px;
+  height: 350px;
   padding: 20px;
 }
 /* Teachers Section */
@@ -83,6 +83,13 @@ h1 {
 }
 .article--img img {
   border-radius: 5px;
+  margin-bottom: 20px;
+}
+.news--container h2{
+  color: black;
+}
+.body{
+  color: black;
 }
 /* Single News Page */
 .singleNews--content {
@@ -203,12 +210,16 @@ h1 {
   background-color: #0b6b39;
   color: white;
   margin: 20px 0;
-  padding: 40px;
+  padding: 40px 10px;
   border-radius: 6px;
 }
 .steps h2{
   text-align: center;
   margin-bottom: 25px;
+}
+.admission--icon{
+  font-size: 28px;
+  margin-right: 5px;
 }
 
 /* Contact Page */
