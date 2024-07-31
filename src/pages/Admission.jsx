@@ -2,7 +2,17 @@ import React, { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Image from "../assets/images/34.jpg";
+import { FaPenToSquare } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa";
+
 export default function Admission() {
+  useEffect(() => {
+    AOS.init();
+  });
+
   const [form, setForm] = useState({
     admissionId: "",
     phone: "",
@@ -181,47 +191,33 @@ export default function Admission() {
           <div className="admission--content-1">
             <h1>Admission</h1>
             <p>
-              If you have any questions, please don't hesitate to get in touch
-              via +2346583465385 or <span>info@jschool.net</span>
+              Welcome to our Admission page we promise to make your stay a
+              fulfilling one
             </p>
           </div>
-          <div className="admission--content-2">
-            <div className="content-2">
-              <div className="line"></div>
-              <h1>Get Result</h1>
-              <form onSubmit={handleSubmit} className="admission--id">
-                <div className="content--2--input">
-                  <div className="input">
-                    <label htmlFor="admissionId">
-                      Admission ID <span>*</span>
-                    </label>
-                    <br />
-                    <input
-                      type="text"
-                      name="admissionId"
-                      value={form.admissionId}
-                      onChange={handleChange}
-                    />
-                    {errors.admissionId && (
-                      <p className="error">{errors.admissionId}</p>
-                    )}
-                  </div>
-                  <div className="input">
-                    <label htmlFor="phone">
-                      Phone No <span>*</span>
-                    </label>
-                    <br />
-                    <input
-                      type="text"
-                      name="phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                    />
-                    {errors.phone && <p className="error">{errors.phone}</p>}
-                  </div>
-                <button type="submit">Submit</button>
-                </div>
-              </form>
+          <div className="admission--intro">
+            <div className="admission--intro--text">
+              <h2 data-aos="fade-right" data-aos-duration="1500">
+                Admission session for 2024 is currently on for classes in the
+                school.
+              </h2>
+              <br />
+              <p data-aos="fade-left" data-aos-duration="1500">
+                Enroll your wards now tomorrow maybe too late
+              </p>
+            </div>
+          </div>
+
+          <div className="admission--steps">
+            <div className="admission--steps--content">
+              <img src={Image} className="img" />
+              
+              <div className="steps">
+                <h2>3 key steps to join our school</h2>
+                <p><FaPenToSquare/> Fill the application form below</p>
+                <p><FaEnvelope/> Check your email for application details</p>
+                <p><FaPenToSquare/> Write our entrance examination</p>
+              </div>
             </div>
           </div>
 
@@ -394,6 +390,45 @@ export default function Admission() {
               </div>
               <button type="submit">Apply</button>
             </form>
+          </div>
+          <div className="admission--content-2">
+            <div className="content-2">
+              <div className="line"></div>
+              <h1>Get Result</h1>
+              <form onSubmit={handleSubmit} className="admission--id">
+                <div className="content--2--input">
+                  <div className="input">
+                    <label htmlFor="admissionId">
+                      Admission ID <span>*</span>
+                    </label>
+                    <br />
+                    <input
+                      type="text"
+                      name="admissionId"
+                      value={form.admissionId}
+                      onChange={handleChange}
+                    />
+                    {errors.admissionId && (
+                      <p className="error">{errors.admissionId}</p>
+                    )}
+                  </div>
+                  <div className="input">
+                    <label htmlFor="phone">
+                      Phone No <span>*</span>
+                    </label>
+                    <br />
+                    <input
+                      type="text"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                    />
+                    {errors.phone && <p className="error">{errors.phone}</p>}
+                  </div>
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

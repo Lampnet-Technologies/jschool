@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import JschLogo from "../assets/images/Jsch Logo.png";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function Header() {
   const [showLogin, setShowLogin] = useState(false);
@@ -14,15 +15,15 @@ export default function Header() {
   const closeMenu = () => {
     setShowLogin(false);
     setIsMenuOpen(false);
-    setShowMore(false)
+    setShowMore(false);
   };
 
   const toggleLogin = () => {
     setShowLogin(!showLogin);
   };
   const handleShowMore = () => {
-    setShowMore(!showMore)
-  }
+    setShowMore(!showMore);
+  };
 
   return (
     <div className="header--wrapper">
@@ -65,7 +66,7 @@ export default function Header() {
                   Contact
                 </Link>
               </li>
-              <li onClick={handleShowMore}>More</li>
+              <li onClick={handleShowMore} className='more--btn'>More <FaChevronDown/> </li>
               {showMore && (
                 <ul className="showMore">
                   <li>
@@ -76,11 +77,6 @@ export default function Header() {
                   <li>
                     <Link className="link" to="/teachers" onClick={closeMenu}>
                       Teachers
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="link" to="/" onClick={closeMenu}>
-                      Home
                     </Link>
                   </li>
                 </ul>
@@ -121,11 +117,6 @@ export default function Header() {
         {isMenuOpen && (
           <nav>
             <ul className="nav--links mobile">
-              {/* <li>
-                <Link className="link" to="/" onClick={closeMenu}>
-                  Home
-                </Link>
-              </li> */}
               <li>
                 <Link className="link" to="/about" onClick={closeMenu}>
                   About
@@ -136,26 +127,32 @@ export default function Header() {
                   Admission
                 </Link>
               </li>
-              {/* <li>
-                <Link className="link" to="/teachers" onClick={closeMenu}>
-                  Teachers
-                </Link>
-              </li> */}
+
               <li>
                 <Link className="link" to="/news" onClick={closeMenu}>
                   Events & News
                 </Link>
               </li>
-              {/* <li>
-                <Link className="link" to="/gallery" onClick={closeMenu}>
-                  Gallery
-                </Link>
-              </li> */}
               <li>
                 <Link className="link" to="/contact" onClick={closeMenu}>
                   Contact
                 </Link>
               </li>
+              <li onClick={handleShowMore} className='more--btn'>More <FaChevronDown/></li>
+              {showMore && (
+                <ul className="showMore">
+                  <li>
+                    <Link className="link" to="/gallery" onClick={closeMenu}>
+                      Gallery
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="link" to="/teachers" onClick={closeMenu}>
+                      Teachers
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </ul>
           </nav>
         )}

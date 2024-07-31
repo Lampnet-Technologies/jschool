@@ -192,17 +192,21 @@ textarea {
   line-height: 35px;
   transition: 0.3s ease;
 }
-.mobile .link {
+.mobile .link, li {
   color: #ff2a2a;
 }
 .mobile .link:hover {
   color: #0b6b39;
 }
-.desktop li {
+.desktop, .mobile li {
   transition: 0.3s ease;
 }
-.desktop li:hover {
+.desktop, .mobile li:hover {
   color: #0b6b39;
+}
+/* More Button */
+.more--btn{
+  cursor: pointer;
 }
 /* Login page styling (Universal)*/
 .login--page {
@@ -237,15 +241,6 @@ textarea {
   text-align: center;
 }
 
-/* Show more Btn styling */
-.showMore{
-  position: absolute;
-  background-color: white;
-  width: 30%;
-  top: 82px;
-  right: 0;
-  height: 200px;
-}
 
 /* HomePage */
 
@@ -713,6 +708,15 @@ button {
   .desktop .link:hover {
     color: #0b6b39;
   }
+  /* Show more Btn styling */
+.showMore{
+  position: absolute;
+  background-color: white;
+  width: 30%;
+  top: 82px;
+  right: 0;
+  height: 120px;
+}
   /* Login page styling (Universal)*/
   .login--page {
     width: 80%;

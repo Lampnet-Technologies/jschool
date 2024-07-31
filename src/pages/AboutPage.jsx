@@ -5,6 +5,7 @@ import RandomImage from "../assets/images/30.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Typed from "typed.js";
+import { Link } from "react-router-dom";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -57,6 +58,11 @@ export default function AboutPage() {
                   <img src={RandomImage} className="img" alt="" />
                 </div>
               </div>
+              <div className="about--gallery">
+                <Link className="link" to="/gallery">
+                  See our school in picture
+                </Link>
+              </div>
             </div>
 
             <div className="jschool--history">
@@ -94,15 +100,23 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="jchool--vision">
-              <h1>Our Vision</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                quas aspernatur laudantium repudiandae dolore pariatur
-                dignissimos nam perferendis, earum voluptates minima expedita
-                eveniet possimus nihil itaque accusamus nesciunt dicta beatae!
-              </p>
+            <br /><br />
+            <div className="vision--bg">
+              <div className="vision--overlay">
+                <div className="jchool--vision" data-aos="fade-right"
+                  data-aos-duration="1500">
+                  <h1>Our Vision</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Sunt quas aspernatur laudantium repudiandae dolore pariatur
+                    dignissimos nam perferendis, earum voluptates minima
+                    expedita eveniet possimus nihil itaque accusamus nesciunt
+                    dicta beatae!
+                  </p>
+                </div>
+              </div>
             </div>
+            <br /><br />
           </div>
         </div>
       </div>
