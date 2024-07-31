@@ -210,9 +210,9 @@ export default function Admission() {
 
           <div className="admission--steps">
             <div className="admission--steps--content">
-              <img src={Image} className="img" />
+              <img src={Image} className="img" data-aos="fade-right" data-aos-duration="1500" />
               
-              <div className="steps">
+              <div className="steps" data-aos="fade-left" data-aos-duration="1500">
                 <h2>3 key steps to join our school</h2>
                 <p><FaPenToSquare className="admission--icon"/> Fill the application form below</p>
                 <p><FaEnvelope className="admission--icon"/> Check your email for application details</p>
