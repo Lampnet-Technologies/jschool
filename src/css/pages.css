@@ -64,11 +64,11 @@ h1 {
   background: url(/src/assets/images/43.png);
   background-size: cover;
   background-position: center;
-  height: 350px;
+  height: 450px;
 }
 .vision--overlay {
   background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(11, 107, 57, 0.8));
-  height: 350px;
+  height: 450px;
   padding: 30px;
 }
 /* Teachers Section */
@@ -318,6 +318,12 @@ h1 {
   }
   .about--gallery {
     width: 20%;
+  }
+  .vision--bg{
+height: 350px;
+  }
+  .vision--overlay{
+    height: 350px;
   }
   /* Teachers Section */
   .teachers--page {
