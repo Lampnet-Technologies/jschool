@@ -347,6 +347,7 @@ color: #ff2a2a !important;
   font-weight: bold;
   transition: 0.3s ease;
   margin-bottom: 30px;
+  /* z-index: 55; */
 }
 .hero--btn .button-1:hover {
   background-color: white;

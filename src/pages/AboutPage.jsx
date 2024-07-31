@@ -71,7 +71,8 @@ export default function AboutPage() {
                 <div className="line"></div>
                 <h1>Our History</h1>
                 <div className="history--body">
-                  <div className="origin">
+                  <div className="origin" data-aos="fade-right"
+            data-aos-duration="1500">
                     <h3>Origin</h3>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -80,7 +81,8 @@ export default function AboutPage() {
                       veniam iure alias esse voluptatum vero.
                     </p>
                   </div>
-                  <div className="campus">
+                  <div className="campus" data-aos="fade-left"
+            data-aos-duration="1500">
                     <h3>Campus</h3>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -89,7 +91,8 @@ export default function AboutPage() {
                       distinctio minus?
                     </p>
                   </div>
-                  <div className="success">
+                  <div className="success" data-aos="fade-right"
+            data-aos-duration="1500">
                     <h3>Success</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
