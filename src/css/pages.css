@@ -33,6 +33,10 @@ h3,
 h1 {
   margin-bottom: 20px;
 }
+.jschool--body{
+  background-color: #C4FFDB;
+  padding: 20px;
+}
 .about--gallery {
   width: 60%;
   border-radius: 5px;
@@ -149,11 +153,14 @@ h1 {
   width: 70%;
 }
 .admission--intro{
-  background-color: #0b6b39;
+  background-color: #208849;
   color: white;
   text-align: center;
   padding: 80px 20px;
   border-radius: 6px;
+}
+.admission--intro--text h2{
+  color: #ff2a2a;
 }
 .admission--content-2 {
   background-color: #f4f4f4;
@@ -207,7 +214,7 @@ h1 {
   margin: 40px 0;
 }
 .steps{
-  background-color: #0b6b39;
+  background-color: #208849;
   color: white;
   margin: 20px 0;
   padding: 40px 10px;

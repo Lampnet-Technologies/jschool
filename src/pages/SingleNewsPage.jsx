@@ -56,7 +56,10 @@ export default function SingleNewsPage() {
     <div className="singleNews pages">
       <div className="singleNews--content">
         <section>
-          <h1>{singleNewsPost.title}</h1>
+        <Link to="/news" className="news--link">
+            <FaArrowLeft />
+          </Link>
+          <h4>{singleNewsPost.title}</h4>
           {singleNewsPost.mainImage && singleNewsPost.mainImage.asset.url && (
             <img
               className="img"
@@ -72,9 +75,7 @@ export default function SingleNewsPage() {
               dataset="production"
             />
           </div>
-          <Link to="/news" className="news--link">
-            <FaArrowLeft /> Back
-          </Link>
+          
         </section>
         <section className="News--Events">
           <div className="news--container">

@@ -30,6 +30,7 @@ export default function AboutPage() {
         <div className="jschool--container">
           <div className="jschool--content">
             <div className="about--jschool">
+            <div className="line"></div>
               <h1>
                 About <span ref={el} />
               </h1>
@@ -39,7 +40,7 @@ export default function AboutPage() {
                 data-aos-duration="1500"
               >
                 <div className="jschool--body">
-                  <div className="line"></div>
+        
                   <h2>JSchool</h2>
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.

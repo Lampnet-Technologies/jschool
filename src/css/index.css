@@ -106,7 +106,6 @@ textarea {
 .header {
   background-color: white;
   margin-top: -10px;
-  border-bottom: 2px solid #ff2a2a;
 }
 .header--content {
   display: flex;
@@ -133,7 +132,7 @@ textarea {
   border-radius: 5px;
 }
 .login h4 {
-  color: #ff2a2a;
+  color: black;
   cursor: pointer;
   font-size: 21px;
 }
@@ -193,20 +192,31 @@ textarea {
   transition: 0.3s ease;
 }
 .mobile .link, li {
-  color: #ff2a2a;
+  color: black;
+}
+.desktop .link, li {
+  color: black !important;
 }
 .mobile .link:hover {
-  color: #0b6b39;
+  color: #ff2a2a;
+}
+.desktop .link:hover {
+  color: #ff2a2a !important;
 }
 .desktop, .mobile li {
   transition: 0.3s ease;
 }
 .desktop, .mobile li:hover {
-  color: #0b6b39;
+  color: #ff2a2a !important;
 }
+
 /* More Button */
-.more--btn{
+.desktop .more--btn{
   cursor: pointer;
+  transition: .3s ease;
+}
+.desktop .more--btn:hover{
+color: #ff2a2a !important;
 }
 /* Login page styling (Universal)*/
 .login--page {

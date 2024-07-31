@@ -79,10 +79,10 @@ export default function Footer() {
         <div className="footer--container">
           <div className="footer--content">
             <img src={JsLogo} className="footer--logo" alt="JSchool logo" />
-            <p>
+            {/* <p>
               JSchool is a fully accredited, independent, international school
               in Lagos, Nigeria.
-            </p>
+            </p> */}
             <br />
             <div className="footer--location">
               <p>
@@ -97,12 +97,12 @@ export default function Footer() {
           <br />
           <br />
           <div className="footer--content">
-            <h2>Vital Links</h2>
+            {/* <h2>Vital Links</h2> */}
             <div className="vital--links">
               <div className="footer--links">
-                <Link to="/" className="links">
+                {/* <Link to="/" className="links">
                   Home
-                </Link>
+                </Link> */}
                 <Link to="/about" className="links">
                   About
                 </Link>
@@ -117,9 +117,9 @@ export default function Footer() {
                 <Link to="/admission" className="links">
                   Admission
                 </Link>
-                <Link to="/career" className="links">
+                {/* <Link to="/career" className="links">
                   Career
-                </Link>
+                </Link> */}
                 <Link to="/news" className="links">
                   News & Events
                 </Link>

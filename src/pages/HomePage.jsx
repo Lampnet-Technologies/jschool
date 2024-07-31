@@ -518,6 +518,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      
+
+      <section className="community">
+        <div className="community--content">
+          <div className="community--background">
+            <div className="community--news-letter" data-aos="fade-right"
+            data-aos-duration="1500">
+              <h4>Subscribe to Our Newsletter</h4>
+              <p>For latest news about school and more</p>
+              <form className="news--letter--input" onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  value={newsLetter.email}
+                />
+                <button type="submit">Subscribe</button>
+              </form>
+              {errors.email && <p className="error">{errors.email}</p>}
+            </div>
+            <br />
+            <div className="community--info" data-aos="fade-left"
+            data-aos-duration="1500">
+              <div className="line-2"></div>
+              <h2>The School Community</h2>
+              <p>Share your school pride with the world!</p>
+              <div className="community--socials">
+                <FaFacebook className="community--icon" />
+                <FaLinkedin className="community--icon" />
+                <FaX className="community--icon" />
+                <FaYoutube className="community--icon" />
+                <FaGooglePlusG className="community--icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="parents--corner">
         <div className="parents--container">
           <div className="parent--header">
@@ -565,42 +603,6 @@ export default function HomePage() {
                   labore cumque, incidunt eos nisi asperiores!
                 </p>
                 <h4>John Doe</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="community">
-        <div className="community--content">
-          <div className="community--background">
-            <div className="community--news-letter" data-aos="fade-right"
-            data-aos-duration="1500">
-              <h4>Subscribe to Our Newsletter</h4>
-              <p>For latest news about school and more</p>
-              <form className="news--letter--input" onSubmit={handleSubmit}>
-                <input
-                  type="email"
-                  name="email"
-                  onChange={handleChange}
-                  value={newsLetter.email}
-                />
-                <button type="submit">Subscribe</button>
-              </form>
-              {errors.email && <p className="error">{errors.email}</p>}
-            </div>
-            <br />
-            <div className="community--info" data-aos="fade-left"
-            data-aos-duration="1500">
-              <div className="line-2"></div>
-              <h2>The School Community</h2>
-              <p>Share your school pride with the world!</p>
-              <div className="community--socials">
-                <FaFacebook className="community--icon" />
-                <FaLinkedin className="community--icon" />
-                <FaX className="community--icon" />
-                <FaYoutube className="community--icon" />
-                <FaGooglePlusG className="community--icon" />
               </div>
             </div>
           </div>
