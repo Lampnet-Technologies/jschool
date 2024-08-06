@@ -69,13 +69,13 @@ input {
 textarea {
   caret-color: #ff2a2a;
 }
-.scroll--up{
+.scroll--up {
   position: fixed;
   bottom: 25px;
   right: 25px;
   z-index: 88;
 }
-.scroll--up button{
+.scroll--up button {
   color: white;
   background-color: #ff2a2a;
   padding: 15px;
@@ -84,13 +84,13 @@ textarea {
   animation: bounce linear 2s infinite;
 }
 @keyframes bounce {
-  0%{
+  0% {
     transform: translateY(0);
   }
-  50%{
+  50% {
     transform: translateY(-10px);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
@@ -114,10 +114,15 @@ textarea {
   padding: 5px 0;
   width: 90%;
   margin: 10px auto;
+  flex-direction: row-reverse;
 }
 .logo--menu {
   display: flex;
   align-items: center;
+}
+.logo {
+  position: relative;
+  left: -170px;
 }
 .Jsch--logo {
   width: 50px;
@@ -139,21 +144,10 @@ textarea {
 }
 
 /* Login Links styling */
-.login {
-  display: flex;
-  gap: 30px;
-  align-items: center;
+.login--mobile {
+  margin-top: 10px;
 }
-.login--links {
-  position: absolute;
-  right: 0;
-  top: 78px;
-  background-color: #ff2a2a;
-  padding: 15px;
-  width: 30%;
-  height: 30vh;
-  z-index: 88;
-}
+
 .login--links li {
   line-height: 33px;
   transition: 0.3s ease;
@@ -165,15 +159,19 @@ textarea {
 .login--links .link:hover {
   color: #0b6b39;
 }
-.enroll--btn button {
+.login--mobile .enroll--btn button {
   background-color: #0b6b39;
   padding: 8px;
   width: 100px;
   text-align: center;
   border-radius: 5px;
 }
-.enroll--btn .link {
+.login--mobile .enroll--btn .link {
   color: white;
+}
+.link--enroll {
+  color: white;
+  text-decoration: none;
 }
 /* NavBar Links styling */
 .desktop {
@@ -192,10 +190,12 @@ textarea {
   line-height: 35px;
   transition: 0.3s ease;
 }
-.mobile .link, li {
+.mobile .link,
+li {
   color: black;
 }
-.desktop .link, li {
+.desktop .link,
+li {
   color: black !important;
 }
 .mobile .link:hover {
@@ -204,20 +204,22 @@ textarea {
 .desktop .link:hover {
   color: #ff2a2a !important;
 }
-.desktop, .mobile li {
+.desktop,
+.mobile li {
   transition: 0.3s ease;
 }
-.desktop, .mobile li:hover {
+.desktop,
+.mobile li:hover {
   color: #ff2a2a !important;
 }
 
 /* More Button */
-.desktop .more--btn{
+.desktop .more--btn {
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-.desktop .more--btn:hover{
-color: #ff2a2a !important;
+.desktop .more--btn:hover {
+  color: #ff2a2a !important;
 }
 /* Login page styling (Universal)*/
 .login--page {
@@ -252,7 +254,6 @@ color: #ff2a2a !important;
   text-align: center;
 }
 
-
 /* HomePage */
 
 /* Hero Section */
@@ -277,7 +278,7 @@ color: #ff2a2a !important;
 .carousel1 {
   text-align: left;
 }
-.carousel1 button{
+.carousel1 button {
   width: 20% !important;
 }
 .carousel2 {
@@ -353,10 +354,10 @@ color: #ff2a2a !important;
   background-color: white;
   color: #0b6b39;
 }
-.hero--btn{
+.hero--btn {
   display: flex;
 }
-.hero--btn button{
+.hero--btn button {
   width: 100% !important;
 }
 
@@ -414,18 +415,18 @@ color: #ff2a2a !important;
 .rating .grad--icon {
   color: #ff2a2a;
 }
-.about--image{
+.about--image {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;
 }
-.about--image .img-1{
-  grid-row: 1 /span 2;
-  grid-column: 1 /span 2;
+.about--image .img-1 {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
   width: 50%;
   margin: auto;
 }
-.about--text button{
+.about--text button {
   width: 30%;
 }
 /* .about--icon {
@@ -463,7 +464,7 @@ color: #ff2a2a !important;
 }
 
 /* Parent Corner Section */
-.parents--corner{
+.parents--corner {
   background-color: #e8edea;
   padding: 50px 0;
 }
@@ -471,7 +472,7 @@ color: #ff2a2a !important;
   width: 90%;
   margin: auto;
 }
-.parent--header{
+.parent--header {
   margin-bottom: 20px;
 }
 .parent--content {
@@ -537,7 +538,7 @@ color: #ff2a2a !important;
   color: white;
   padding: 10px;
   margin: 20px auto;
-  width:60% ;
+  width: 60%;
   display: block;
   transition: 0.3s ease;
 }
@@ -546,7 +547,7 @@ color: #ff2a2a !important;
   border: 2px solid #0b6b39;
   color: #0b6b39;
 }
-.splide--text{
+.splide--text {
   color: black;
 }
 /* Community Section */
@@ -587,23 +588,23 @@ color: #ff2a2a !important;
 .community--icon:hover {
   transform: translateY(-10px);
 }
-.community--news-letter{
+.community--news-letter {
   border: 5px solid #8e4926;
   border-radius: 8px;
   padding: 20px;
   width: 80%;
   margin: 20px auto;
 }
-.community--news-letter button{
+.community--news-letter button {
   background-color: #0b6b39;
   color: white;
   border-radius: 5px;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-.community--news-letter button:hover{
- border: 2px solid #0b6b39;
- background-color: white;
- color: #0b6b39;
+.community--news-letter button:hover {
+  border: 2px solid #0b6b39;
+  background-color: white;
+  color: #0b6b39;
 }
 /* Gallery Section */
 .gallery--container {
@@ -614,10 +615,10 @@ color: #ff2a2a !important;
   color: #ff2a2a;
   font-size: 18px;
 }
-.gallery--img{
+.gallery--img {
   margin-top: 20px;
 }
-.gallery--img img{
+.gallery--img img {
   margin-bottom: 20px;
 }
 /* Footer Section */
@@ -684,7 +685,7 @@ button {
   border: none;
   padding: 5px;
 }
-.news--letter--input input{
+.news--letter--input input {
   width: 80%;
 }
 .news-letter button {
@@ -707,10 +708,45 @@ button {
     height: 300px;
   }
   /* NavBar Desktop View styling */
+  .header--content {
+    flex-direction: row;
+  }
+  .logo {
+    left: -190px;
+  }
+  .login {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    top: 10px;
+    right: -150px;
+  }
   .desktop {
     display: flex;
     gap: 30px;
     position: relative;
+    left: -120px;
+  }
+  .login--links{
+    position: absolute;
+    background-color: white;
+    top: 63px;
+    width: 100%;
+    padding: 20px;
+  }
+  .login--links li .link{
+    color: green !important;
+  }
+  .login--desktop .enroll--btn button {
+    background-color: #0b6b39;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .login--desktop .enroll--btn .link {
+    color: white !important;
   }
   .desktop li {
     color: #ff2a2a;
@@ -725,14 +761,14 @@ button {
     color: #0b6b39;
   }
   /* Show more Btn styling */
-.showMore{
-  position: absolute;
-  background-color: white;
-  width: 30%;
-  top: 82px;
-  right: 0;
-  height: 120px;
-}
+  .showMore {
+    position: absolute;
+    background-color: white;
+    width: 30%;
+    top: 82px;
+    right: 0;
+    height: 120px;
+  }
   /* Login page styling (Universal)*/
   .login--page {
     width: 80%;
@@ -811,14 +847,14 @@ button {
     align-items: center;
   }
   /* Community Section */
-  .community--background{
+  .community--background {
     display: flex;
     padding: 80px;
   }
-  .community--news-letter{
+  .community--news-letter {
     width: 40%;
   }
-  .community--info{
+  .community--info {
     width: 40%;
   }
   /* Parents corner section */
@@ -856,7 +892,7 @@ button {
   .footer--content p {
     font-size: 21px;
   }
-  .vital--links{
+  .vital--links {
     display: flex;
     gap: 70px;
   }
@@ -901,7 +937,7 @@ button {
     gap: 20px;
   }
   /* Footer Section */
-  .vital--links{
+  .vital--links {
     display: flex;
     gap: 70px;
   }

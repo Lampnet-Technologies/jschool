@@ -35,12 +35,11 @@ export default function Header() {
             ) : (
               <i className="fa-solid fa-bars menu" onClick={toggleMenu}></i>
             )}
-
-            <div className="logo">
-              <Link to="/">
-                <img src={JschLogo} alt="Logo" className="Jsch--logo" />
-              </Link>
-            </div>
+          </div>
+          <div className="logo">
+            <Link to="/">
+              <img src={JschLogo} alt="Logo" className="Jsch--logo" />
+            </Link>
           </div>
           <nav>
             <ul className="desktop">
@@ -66,7 +65,9 @@ export default function Header() {
                   Contact
                 </Link>
               </li>
-              <li onClick={handleShowMore} className='more--btn'>More <FaChevronDown/> </li>
+              <li onClick={handleShowMore} className="more--btn">
+                More <FaChevronDown />{" "}
+              </li>
               {showMore && (
                 <ul className="showMore">
                   <li>
@@ -81,37 +82,37 @@ export default function Header() {
                   </li>
                 </ul>
               )}
+              <div className="login login--desktop">
+                <h4 onClick={toggleLogin}>Login</h4>
+                {showLogin && (
+                  <ul className="login--links">
+                    <li>
+                      <Link className="link" to="/student" onClick={closeMenu}>
+                        Student
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="link" to="/teacher" onClick={closeMenu}>
+                        Teacher
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="link" to="/parent" onClick={closeMenu}>
+                        Parent
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+                <div className="enroll--btn">
+                  <button>
+                    <Link to="/admission" className="link">
+                      Enroll
+                    </Link>
+                  </button>
+                </div>
+              </div>
             </ul>
           </nav>
-          <div className="login">
-            <h4 onClick={toggleLogin}>Login</h4>
-            {showLogin && (
-              <ul className="login--links">
-                <li>
-                  <Link className="link" to="/student" onClick={closeMenu}>
-                    Student
-                  </Link>
-                </li>
-                <li>
-                  <Link className="link" to="/teacher" onClick={closeMenu}>
-                    Teacher
-                  </Link>
-                </li>
-                <li>
-                  <Link className="link" to="/parent" onClick={closeMenu}>
-                    Parent
-                  </Link>
-                </li>
-              </ul>
-            )}
-            <div className="enroll--btn">
-              <button>
-                <Link to="/admission" className="link">
-                  Enroll
-                </Link>
-              </button>
-            </div>
-          </div>
         </div>
         {/* Mobile view navBar */}
         {isMenuOpen && (
@@ -138,7 +139,9 @@ export default function Header() {
                   Contact
                 </Link>
               </li>
-              <li onClick={handleShowMore} className='more--btn'>More <FaChevronDown/></li>
+              <li onClick={handleShowMore} className="more--btn">
+                More <FaChevronDown />
+              </li>
               {showMore && (
                 <ul className="showMore">
                   <li>
@@ -153,6 +156,35 @@ export default function Header() {
                   </li>
                 </ul>
               )}
+              <div className="login login--mobile">
+                <h4 onClick={toggleLogin}>Login</h4>
+                {showLogin && (
+                  <ul className="login--links">
+                    <li>
+                      <Link className="link" to="/student" onClick={closeMenu}>
+                        Student
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="link" to="/teacher" onClick={closeMenu}>
+                        Teacher
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="link" to="/parent" onClick={closeMenu}>
+                        Parent
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+                <div className="enroll--btn">
+                  <button>
+                    <Link to="/admission" className="link--enroll">
+                      Enroll
+                    </Link>
+                  </button>
+                </div>
+              </div>
             </ul>
           </nav>
         )}
