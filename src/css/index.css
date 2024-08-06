@@ -712,7 +712,7 @@ button {
     flex-direction: row;
   }
   .logo {
-    left: -190px;
+    left: -170px;
   }
   .login {
     display: flex;
