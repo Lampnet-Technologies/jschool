@@ -14,6 +14,10 @@ body {
 ul {
   list-style: none;
 }
+h1,
+h2 {
+  font-size: 24px !important;
+}
 span {
   color: #ff2a2a;
 }
@@ -134,14 +138,14 @@ textarea {
   color: #ff2a2a;
   border: 1px solid #ff2a2a;
   padding: 8px;
-  
+
   border-radius: 5px;
 }
 .login h4 {
   color: #ff2a2a;
   cursor: pointer;
   text-decoration: underline;
-  font-size: 21px;
+  font-size: 20px !important;
 }
 
 /* Login Links styling */
@@ -312,7 +316,7 @@ li {
 }
 .carousel--content {
   width: 90%;
-  margin: 20px auto;
+  margin: 50px auto;
   z-index: 9;
 }
 .carousel--content h4 {
@@ -729,14 +733,14 @@ button {
     position: relative;
     left: -120px;
   }
-  .login--links{
+  .login--links {
     position: absolute;
     background-color: white;
     top: 63px;
     width: 100%;
     padding: 20px;
   }
-  .login--links li .link{
+  .login--links li .link {
     color: green !important;
   }
   .login--desktop .enroll--btn button {
@@ -795,17 +799,17 @@ button {
   .carousel--content {
     display: flex;
     justify-content: space-around;
-    margin: 120px auto !important;
+    margin: 130px auto !important;
   }
   .carousel--content h4 {
-    font-size: 60px;
+    font-size: 50px !important;
     width: 70%;
   }
   .carousel--content button {
     width: 30%;
   }
   .play-content h2 {
-    font-size: 40px;
+    font-size: 30px !important;
   }
   /* Introduction Section */
   .intro--section {

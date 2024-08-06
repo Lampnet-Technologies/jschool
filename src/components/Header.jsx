@@ -66,7 +66,7 @@ export default function Header() {
                 </Link>
               </li>
               <li onClick={handleShowMore} className="more--btn">
-                More <FaChevronDown />{" "}
+                More <FaChevronDown />
               </li>
               {showMore && (
                 <ul className="showMore">

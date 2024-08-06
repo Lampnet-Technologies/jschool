@@ -12,6 +12,12 @@ input {
 textarea {
   caret-color: #ff2a2a;
 }
+h4,
+h2,
+h1,
+h3 {
+  font-size: 24px !important;
+}
 /* About page section */
 .jschool--container {
   margin: 40px 0;
@@ -26,15 +32,15 @@ textarea {
   width: 90%;
 }
 .jchool--vision {
- background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
 }
 h3,
 h1 {
   margin-bottom: 20px;
 }
-.jschool--body{
-  background-color: #C4FFDB;
+.jschool--body {
+  background-color: #c4ffdb;
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -90,10 +96,10 @@ h1 {
   border-radius: 5px;
   margin-bottom: 20px;
 }
-.news--container h2{
+.news--container h2 {
   color: black;
 }
-.body{
+.body {
   color: black;
 }
 /* Single News Page */
@@ -136,7 +142,7 @@ h1 {
   overflow: hidden;
 }
 /* Admission Page */
-.admission--container{
+.admission--container {
   width: 90%;
   margin: 30px auto;
 }
@@ -153,14 +159,14 @@ h1 {
 .admission--content-1 p {
   width: 70%;
 }
-.admission--intro{
+.admission--intro {
   background-color: #208849;
   color: white;
   text-align: center;
   padding: 80px 20px;
   border-radius: 6px;
 }
-.admission--intro--text h2{
+.admission--intro--text h2 {
   color: #ff2a2a;
 }
 .admission--content-2 {
@@ -211,21 +217,21 @@ h1 {
   background-color: #f4f4f4;
   padding: 15px;
 }
-.admission--steps{
+.admission--steps {
   margin: 40px 0;
 }
-.steps{
+.steps {
   background-color: #208849;
   color: white;
   margin: 20px 0;
   padding: 40px 10px;
   border-radius: 6px;
 }
-.steps h2{
+.steps h2 {
   text-align: center;
   margin-bottom: 25px;
 }
-.admission--icon{
+.admission--icon {
   font-size: 28px;
   margin-right: 5px;
 }
@@ -318,12 +324,12 @@ h1 {
   }
   .about--gallery {
     width: 20%;
-  }npm run 
-  .vision--bg{
-height: 350px;
   }
-  .vision--overlay{
-    height: 350px;
+  .vision--bg {
+    height: 330px;
+  }
+  .vision--overlay {
+    height: 330px;
   }
   /* Teachers Section */
   .teachers--page {
@@ -379,7 +385,7 @@ height: 350px;
     padding: 5px;
     font-size: 23px;
   }
-  .admission--intro p{
+  .admission--intro p {
     font-size: 25px;
   }
   .content--2--input {
@@ -391,17 +397,17 @@ height: 350px;
   .admission--content-3 form button {
     width: 20%;
   }
-  .admission--steps{
+  .admission--steps {
     position: relative;
     top: 39px;
   }
-  .admission--steps img{
+  .admission--steps img {
     width: 60%;
     height: 500px;
     object-fit: cover;
     margin-bottom: 220px;
   }
-  .steps{
+  .steps {
     width: 50%;
     position: absolute;
     right: 40px;
