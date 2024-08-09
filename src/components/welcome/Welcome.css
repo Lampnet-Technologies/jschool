@@ -1,0 +1,73 @@
+.welcome-container {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.welcome-left {
+  text-align: center;
+}
+.welcome-left h2 {
+  font-size: 60px !important;
+  font-family: "Allura", sans-serif;
+  color: #1593d6;
+}
+.welcome-left .welcome-school {
+  font-weight: bold;
+}
+.welcome-left button {
+  background: #1593d6;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 5px;
+  width: 30%;
+}
+.welcome-left button:active {
+  background-color: #c84d4d;
+  transition: 0.3s ease;
+}
+.welcome-left .link {
+  color: white !important;
+}
+.welcome-right img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.welcome-right {
+  position: relative;
+}
+.principal img {
+  border: 10px solid white;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  border-radius: 100%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1120px) {
+  .welcome-container {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 80px;
+    margin-bottom: 90px;
+  }
+  .welcome-left {
+    width: 50%;
+    text-align: justify;
+  }
+  .welcome-left p {
+    width: 80%;
+  }
+  .welcome-right {
+    width: 50%;
+  }
+  .principal img{
+    left: -100px;
+    top: 180px;
+    width: 300px;
+  height: 300px;
+  }
+}

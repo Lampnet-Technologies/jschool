@@ -31,6 +31,7 @@ import Typed from "typed.js";
 import BlockContent from "@sanity/block-content-to-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Welcome from "../components/welcome/Welcome";
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -151,6 +152,7 @@ export default function HomePage() {
   return (
     <div className="homePage pages">
       <Slider />
+      <Welcome />
       <h4 className="intro--header">Why you should be here</h4>
       <section className="intro--section">
         <div className="edu--info1">
