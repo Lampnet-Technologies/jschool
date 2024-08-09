@@ -1,75 +1,110 @@
-import Carousel from "react-bootstrap/Carousel";
+import React, { useEffect, useRef } from "react";
+import "@splidejs/splide/dist/css/splide.min.css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import SliderImage1 from "../assets/images/31.jpg";
 import SliderImage2 from "../assets/images/36.jpg";
 import SliderImage3 from "../assets/images/38.jpg";
 import SliderImage4 from "../assets/images/43.png";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
-import { FaForward, FaPlay } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Typed from "typed.js";
 
-export default function Slider() {
+const slideTexts = [
+  "Welcome to JSchool...",
+  "Explore Opportunities...",
+  "Innovative Learning...",
+  "Experienced Teachers...",
+];
+
+const Slider = () => {
+  useEffect(() => {
+    AOS.init();
+  });
+  const splideRef = useRef(null);
+
+  useEffect(() => {
+    if (splideRef.current) {
+      const splide = splideRef.current.splide;
+
+      const updateTypedText = (newIndex) => {
+        const textElement =
+          splide.Components.Slides.getAt(newIndex).slide.querySelector(
+            ".typed-text"
+          );
+        if (textElement) {
+          new Typed(textElement, {
+            strings: [slideTexts[newIndex]],
+            typeSpeed: 80,
+            backSpeed: 50,
+            loop: true,
+          });
+        }
+      };
+
+      splide.on("move", (newIndex, prevIndex) => {
+        const prevSlide = splide.Components.Slides.getAt(prevIndex).slide;
+        const newSlide = splide.Components.Slides.getAt(newIndex).slide;
+
+        prevSlide.querySelector("img").style.transform = "scale(1)";
+        newSlide.querySelector("img").style.transform = "scale(1.2)";
+      });
+
+      splide.on("moved", () => {
+        updateTypedText(splide.index);
+      });
+
+      splide.on("mounted", () => {
+        updateTypedText(splide.index);
+      });
+    }
+  }, []);
+
   return (
     <div className="slider--page">
       <div className="slider--content">
-        <Carousel
-          className="slider"
-          nextIcon={<FaForward style={{ color: "#ff2a2a" }} />}
-          prevIcon={
-            <FaForward
-              style={{ color: "#ff2a2a", transform: "rotate(180deg)" }}
-            />
-          }
+        <Splide
+          ref={splideRef}
+          options={{
+            type: "fade",
+            rewind: true,
+            autoplay: true,
+            interval: 6000,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            speed: 2000,
+            arrows: false,
+            pagination: false,
+            classes: {
+              prev: "splide__arrow--prev custom-prev",
+              next: "splide__arrow--next custom-next",
+            },
+          }}
         >
-          {[SliderImage4, SliderImage1, SliderImage3].map((image, index) => (
-            <Carousel.Item key={index}>
-              <img src={image} alt={`Slider image ${index + 1}`} />
-              <Carousel.Caption className="caption">
-                <div className="carousel--content">
-                  <div className="carousel1">
-                    <p>A TRADITION SINCE 1999</p>
-                    <h4>Offering Your Child Bright Future</h4>
+          {[SliderImage4, SliderImage1, SliderImage3, SliderImage2].map(
+            (image, index) => (
+              <SplideSlide key={index}>
+                <div className="slide-image">
+                  <img src={image} alt={`Slider image ${index + 1}`} />
+                </div>
+                <div className="slider--content">
+                  <div
+                    className="slide-header"
+                    data-aos="fade-out"
+                    data-aos-duration="1500"
+                  >
+                    <h2>JSchool College</h2>
                     <p>
-                      JSchool graduates are studying in the world's most
-                      prestigious universities.
+                      <span className="typed-text" />
                     </p>
-                    <div className="hero--btn">
-                      <Link to="/admission" className="link">
-                        <button className="btn-2 button-1">Enroll Now</button>
-                      </Link>
-                      <Link to="/gallery" className="link">
-                        <button className="btn-2">Take a Tour</button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="carousel2">
-                    <div className="play">
-                      <Link
-                        className="play--video"
-                        to="https://www.youtube.com/watch?v=qccyDMZASbA
-"
-                        target="_blank"
-                      >
-                        <FaPlay />
-                      </Link>
-                    </div>
-                    <div className="play-content">
-                      <p>JSchool</p>
-                      <h2>CAMPUS TOUR</h2>
-                      <Link
-                        to="https://www.youtube.com/watch?v=qccyDMZASbA
-"
-                        target="_blank"
-                      >
-                        <p>WATCH VIDEO</p>
-                      </Link>
-                    </div>
                   </div>
                 </div>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+              </SplideSlide>
+            )
+          )}
+        </Splide>
       </div>
     </div>
   );
-}
+};
+
+export default Slider;

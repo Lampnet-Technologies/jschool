@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="jschool--container">
           <div className="jschool--content">
             <div className="about--jschool">
-            <div className="line"></div>
+              <div className="line"></div>
               <h1>
                 About <span ref={el} />
               </h1>
@@ -40,7 +40,6 @@ export default function AboutPage() {
                 data-aos-duration="1500"
               >
                 <div className="jschool--body">
-        
                   <h2>JSchool</h2>
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -71,8 +70,11 @@ export default function AboutPage() {
                 <div className="line"></div>
                 <h1>Our History</h1>
                 <div className="history--body">
-                  <div className="origin" data-aos="fade-right"
-            data-aos-duration="1500">
+                  <div
+                    className="origin"
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                  >
                     <h3>Origin</h3>
                     <p>
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -81,8 +83,11 @@ export default function AboutPage() {
                       veniam iure alias esse voluptatum vero.
                     </p>
                   </div>
-                  <div className="campus" data-aos="fade-left"
-            data-aos-duration="1500">
+                  <div
+                    className="campus"
+                    data-aos="fade-left"
+                    data-aos-duration="1500"
+                  >
                     <h3>Campus</h3>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -91,8 +96,11 @@ export default function AboutPage() {
                       distinctio minus?
                     </p>
                   </div>
-                  <div className="success" data-aos="fade-right"
-            data-aos-duration="1500">
+                  <div
+                    className="success"
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                  >
                     <h3>Success</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -104,11 +112,15 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <br /><br />
+            <br />
+            <br />
             <div className="vision--bg">
               <div className="vision--overlay">
-                <div className="jchool--vision" data-aos="fade-right"
-                  data-aos-duration="1500">
+                <div
+                  className="jchool--vision"
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
+                >
                   <h1>Our Vision</h1>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -120,7 +132,8 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <br /><br />
+            <br />
+            <br />
           </div>
         </div>
       </div>
