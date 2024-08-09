@@ -305,6 +305,7 @@ li {
 
 .splide__slide img {
   transition: transform 0.8s ease-in-out;
+  object-fit:cover;
 }
 .slide-image{
   width: 100%;
