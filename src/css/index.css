@@ -310,14 +310,23 @@ li {
 .slide-image{
   width: 100%;
 }
+
 .slide-header{
+  background-color: rgba(26, 16, 16, 0.5);
   position: absolute;
-  bottom: 60px;
-  padding: 0 20px;
+  top: 0;
+  width: 100%;
+  padding-top: 450px;
+  height: 100vh;
+}
+.slide-text{
+  width: 90%;
+  margin: auto;
 }
 .slide-header h2{
   font-size: 40px !important;
   color: white;
+  z-index: 99;
   font-weight: 600;
 }
 .slide-header span{
@@ -743,9 +752,6 @@ button {
   .slider--content img{
     height: 100vh;
   }
-  .slide-header{
-    bottom: 120px;
-  }
   .slide-header h2{
     font-size: 50px !important;
     font-weight: 600;
@@ -754,6 +760,9 @@ button {
   .slide-header span{
     color: white;
     font-size: 18px;
+  }
+  .slide-header{
+    padding-top: 550px;
   }
   /* Introduction Section */
   .intro--section {

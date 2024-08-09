@@ -87,15 +87,17 @@ const Slider = () => {
                   <img src={image} alt={`Slider image ${index + 1}`} />
                 </div>
                 <div className="slider--content">
-                  <div
-                    className="slide-header"
-                    data-aos="fade-out"
-                    data-aos-duration="1500"
-                  >
-                    <h2>JSchool College</h2>
-                    <p>
-                      <span className="typed-text" />
-                    </p>
+                  <div className="slide-header">
+                    <div
+                      className="slide-text"
+                      data-aos="fade-out"
+                      data-aos-duration="1500"
+                    >
+                      <h2>JSchool College</h2>
+                      <p>
+                        <span className="typed-text" />
+                      </p>
+                    </div>
                   </div>
                 </div>
               </SplideSlide>
