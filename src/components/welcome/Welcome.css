@@ -61,6 +61,9 @@
   .welcome-left p {
     width: 80%;
   }
+  .welcome-left h2{
+    font-size: 70px !important;
+  }
   .welcome-right {
     width: 50%;
   }
