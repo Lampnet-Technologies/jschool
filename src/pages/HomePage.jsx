@@ -11,9 +11,6 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import {
-  FaBuildingFlag,
-  FaListCheck,
-  FaNoteSticky,
   FaX,
 } from "react-icons/fa6";
 import AboutImage from "../assets/images/43.png";
@@ -27,13 +24,17 @@ import gallery from "../components/GalleryData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import client from "../client";
-import Typed from "typed.js";
+// import Typed from "typed.js";
 import BlockContent from "@sanity/block-content-to-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Welcome from "../components/welcome/Welcome";
+import WhyChooseUs from "../components/whyChooseUs/WhyChooseUs";
+import CallToAction from "../components/call-to-action/CallToAction";
+import SeeForYourSelf from "../components/seeForYourSelf/SeeForYourSelf";
 
 export default function HomePage() {
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -76,33 +77,33 @@ export default function HomePage() {
   }, []);
   const [posts, setPosts] = useState([]);
 
-  const el = React.useRef(null);
+  // const el = React.useRef(null);
 
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["About", "Jschool"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true,
-    });
-    return () => {
-      typed.destroy();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const typed = new Typed(el.current, {
+  //     strings: ["About", "Jschool"],
+  //     typeSpeed: 50,
+  //     backSpeed: 50,
+  //     loop: true,
+  //   });
+  //   return () => {
+  //     typed.destroy();
+  //   };
+  // }, []);
 
-  const al = React.useRef(null);
+  // const al = React.useRef(null);
 
-  useEffect(() => {
-    const typed = new Typed(al.current, {
-      strings: ["News and Events", "Blog"],
-      typeSpeed: 50,
-      backSpeed: 50,
-      loop: true,
-    });
-    return () => {
-      typed.destroy();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const typed = new Typed(al.current, {
+  //     strings: ["News and Events", "Blog"],
+  //     typeSpeed: 50,
+  //     backSpeed: 50,
+  //     loop: true,
+  //   });
+  //   return () => {
+  //     typed.destroy();
+  //   };
+  // }, []);
 
   /* News Letter */
 
@@ -124,7 +125,6 @@ export default function HomePage() {
     });
   };
 
-  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -153,51 +153,10 @@ export default function HomePage() {
     <div className="homePage pages">
       <Slider />
       <Welcome />
-      <h4 className="intro--header">Why you should be here</h4>
-      <section className="intro--section">
-        <div className="edu--info1">
-          <div className="intro--icon">
-            <FaGraduationCap className="grad--icon" />
-          </div>
-          <p>
-            Education in English: Cambridge International Programmed and
-            qualified native English's speaking teachers.
-          </p>
-        </div>
-        <div className="edu--info2">
-          <div className="intro--icon">
-            <FaBuildingFlag className="grad--icon" />
-          </div>
-          <p>
-            Education in English: Cambridge International Programmed and
-            qualified native English's speaking teachers.
-          </p>
-        </div>
-        <div className="edu--info3">
-          <div className="intro--icon">
-            <FaNoteSticky className="grad--icon" />
-          </div>
-          <p>
-            Education in English: Cambridge International Programmed and
-            qualified native English's speaking teachers.
-          </p>
-        </div>
-        <div className="edu--info4">
-          <div className="intro--icon">
-            <FaListCheck className="grad--icon" />
-          </div>
-          <p>
-            Education in English: Cambridge International Programmed and
-            qualified native English's speaking teachers.
-          </p>
-        </div>
-      </section>
-
-      <section className="js--img">
-        <img src={AboutImage} alt="" />
-      </section>
-
-      <section className="about--section ">
+      <WhyChooseUs />
+      <CallToAction />
+      <SeeForYourSelf />
+      {/* <section className="about--section ">
         <div className="about--content">
           <div
             className="about--text"
@@ -256,7 +215,7 @@ export default function HomePage() {
             <img src={RandomImage} className="img" alt="Image" />
           </div>
         </div>
-      </section>
+      </section> */}
       <br />
       {/* <section className="apply--section">
         <div
@@ -276,7 +235,7 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      <section className="principle--section">
+      {/* <section className="principle--section">
         <div className="principal--content">
           <img
             src={PrincipalImage}
@@ -304,9 +263,9 @@ export default function HomePage() {
             <p className="school">Principle, JSchool</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="teachers">
+      {/* <section className="teachers">
         <div className="teachers--content">
           <div className="line"></div>
           <h1>Our Teachers</h1>
@@ -461,11 +420,11 @@ export default function HomePage() {
             <button className="teachers--btn">See All Teachers</button>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       <br />
 
-      <section className="News--Events">
+      {/* <section className="News--Events">
         <div className="news--container">
           <h1 className="news--title">
             School <span ref={al} />
@@ -518,15 +477,16 @@ export default function HomePage() {
             ))}
           </Splide>
         </div>
-      </section>
-
-      
+      </section> */}
 
       <section className="community">
         <div className="community--content">
           <div className="community--background">
-            <div className="community--news-letter" data-aos="fade-right"
-            data-aos-duration="1500">
+            <div
+              className="community--news-letter"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
               <h4>Subscribe to Our Newsletter</h4>
               <p>For latest news about school and more</p>
               <form className="news--letter--input" onSubmit={handleSubmit}>
@@ -541,8 +501,11 @@ export default function HomePage() {
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
             <br />
-            <div className="community--info" data-aos="fade-left"
-            data-aos-duration="1500">
+            <div
+              className="community--info"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
               <div className="line-2"></div>
               <h2>The School Community</h2>
               <p>Share your school pride with the world!</p>
@@ -558,7 +521,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="parents--corner">
+      {/* <section className="parents--corner">
         <div className="parents--container">
           <div className="parent--header">
             <div className="line"></div>
@@ -609,9 +572,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="gallery">
+      {/* <section className="gallery">
         <div className="gallery--container">
           <div className="line"></div>
           <div className="gallery--header">
@@ -629,7 +592,7 @@ export default function HomePage() {
         <Link className="link" to="/gallery">
           <button className="teachers--btn">See All</button>
         </Link>
-      </section>
+      </section> */}
 
       <Footer />
       <div className="scroll--up">

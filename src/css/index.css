@@ -137,21 +137,16 @@ textarea {
   color: #ff2a2a;
   border: 1px solid #ff2a2a;
   padding: 8px;
-
   border-radius: 5px;
 }
-/* .login h4 {
-  color: #ff2a2a;
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 20px !important;
-} */
 
 /* Login Links styling */
 .login--mobile {
   margin-top: 10px;
 }
-
+.login--desktop {
+  display: none;
+}
 .login--links li {
   line-height: 33px;
   transition: 0.3s ease;
@@ -181,9 +176,6 @@ textarea {
 .desktop {
   display: none;
 }
-.login--desktop{
-  display: none;
-}
 .nav--links {
   position: fixed;
   top: 0;
@@ -201,16 +193,16 @@ textarea {
 li {
   color: black;
 }
-.mobile i{
+.mobile i {
   position: absolute;
   right: 60px;
 }
-.mobile--links{
+.mobile--links {
   margin-top: 60px;
 }
 .desktop .link,
 li {
-  color: black !important;
+  color: white !important;
 }
 .mobile li .link:hover {
   color: #ff2a2a;
@@ -238,6 +230,7 @@ li {
 .mobile .more--btn {
   cursor: pointer;
   transition: 0.3s ease;
+  color: black !important;
 }
 /* Login page styling (Universal)*/
 .login--page {
@@ -271,17 +264,17 @@ li {
 .sign--up {
   text-align: center;
 }
-.portal--btn button{
+.portal--btn button {
   background-color: #ff2a2a;
   padding: 10px;
   border-radius: 5px;
   font-weight: 600;
 }
-.portal--btn button:active{
+.portal--btn button:active {
   background: #8e4926;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-.portal--btn .link{
+.portal--btn .link {
   color: white;
 }
 
@@ -292,7 +285,7 @@ li {
   width: 100%;
   margin-top: -80px;
 }
-.slider--content img{
+.slider--content img {
   width: 100%;
   height: 80vh;
   background-size: cover;
@@ -305,13 +298,13 @@ li {
 
 .splide__slide img {
   transition: transform 0.8s ease-in-out;
-  object-fit:cover;
+  object-fit: cover;
 }
-.slide-image{
+.slide-image {
   width: 100%;
 }
 
-.slide-header{
+.slide-header {
   background-color: rgba(26, 16, 16, 0.5);
   position: absolute;
   top: 0;
@@ -319,17 +312,16 @@ li {
   padding-top: 450px;
   height: 100vh;
 }
-.slide-text{
+.slide-text {
   width: 90%;
   margin: auto;
 }
-.slide-header h2{
+.slide-header h2 {
   font-size: 40px !important;
   color: white;
-  z-index: 99;
   font-weight: 600;
 }
-.slide-header span{
+.slide-header span {
   color: white;
   font-weight: 400;
 }
@@ -337,9 +329,8 @@ li {
   transform: scale(1.06);
 }
 
-
 /* Introduction Section */
-.intro--header {
+/* .intro--header {
   text-align: center;
   margin: 30px 0;
 }
@@ -367,14 +358,14 @@ li {
 }
 .intro--icon {
   color: #ff2a2a;
-}
+} */
 
 /* Intro Image Section */
-.js--img img {
+/* .js--img img {
   width: 100%;
   margin-top: 30px;
   height: 500px;
-}
+} */
 /* About Section */
 .about--section {
   margin-top: 30px;
@@ -700,7 +691,7 @@ button {
     position: relative;
     right: 130px;
   }
-  .login--desktop{
+  .login--desktop {
     display: block;
   }
   .login--desktop .portal--btn {
@@ -722,7 +713,7 @@ button {
   .desktop .link:hover {
     color: #0b6b39;
   }
-  .desktop--nav{
+  .desktop--nav {
     display: flex;
     align-items: baseline;
     gap: 30px;
@@ -730,11 +721,11 @@ button {
   /* Show more Btn styling */
   .showMore {
     position: absolute;
-    background-color: white;
+    background-color: #1593d6;
     width: 60%;
-    top:45px;
+    top: 45px;
     right: 0;
-   padding: 10px 10px 20px;
+    padding: 10px 10px 20px;
   }
   /* Login page styling (Universal)*/
   .login--page {
@@ -749,25 +740,20 @@ button {
     line-height: 50px;
   }
   /* Hero section */
-  .slider--content img{
+  .slider--content img {
     height: 100vh;
   }
-  .slide-header h2{
+  .slide-header h2 {
     font-size: 50px !important;
     font-weight: 600;
     color: white;
   }
-  .slide-header span{
+  .slide-header span {
     color: white;
     font-size: 18px;
   }
-  .slide-header{
-    padding-top: 550px;
-  }
-  /* Introduction Section */
-  .intro--section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  .slide-header {
+    padding-top: 550px !important;
   }
   /* About section */
   .about--content {
@@ -858,33 +844,13 @@ button {
 
 /* Tablet View */
 @media screen and (min-width: 765px) {
-  /* Login Section */
-  .login--page {
-    width: 60%;
-    margin: 200px auto;
-  }
-  /* Introduction Section */
-  .intro--section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  /* Header */
+  .logo {
+    left: -360px;
   }
   /* Hero section */
-  .slider {
-    height: 60vh;
-  }
-  .slider img {
-    height: 60vh;
-  }
-  .slider .caption {
-    height: 60vh;
-  }
-  .carousel1 {
-    width: 60%;
-  }
-  .carousel--content {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 170px;
+  .slide-header {
+    padding-top: 720px;
   }
   .teacher--socials {
     height: 58%;

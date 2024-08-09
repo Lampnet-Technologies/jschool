@@ -1,0 +1,31 @@
+.call-to-action {
+  width: 90%;
+  margin: auto;
+}
+.call-to-action h1 {
+  text-align: center;
+}
+.apply-action-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  background: #de0179;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.two {
+  background-color: #f58634;
+}
+.three {
+  background-color: #1593d6;
+}
+@media screen and (min-width: 1120px) {
+  .call-to-action-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+  }
+}

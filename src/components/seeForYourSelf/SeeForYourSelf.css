@@ -1,0 +1,80 @@
+.seeForYourSelf-container{
+    background: url('../../assets/images/31.jpg');
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+}
+.seeForYourSelf-content{
+    background-color: rgba(0, 0, 0,0.4);
+    width: 100%;
+    height: 60vh;
+    margin-top: 50px;
+    color: white;
+}
+.content-text{
+  padding:140px 20px;
+  text-align: center;
+}
+.seeForYourSelf-btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.seeForYourSelf-btn button{
+    width: 30%;
+    margin: 0 auto 10px;
+    background-color:#4DABF5;
+    padding: 10px;
+    border-radius: 5px;
+}
+.seeForYourSelf-btn button:active{
+    background-color: #f58634;
+    transition: .3s ease;
+}
+.seeForYourSelf-btn .link{
+    color: white;
+}
+
+@media screen and (min-width:1120px) {
+    .content-text h1{
+        font-size: 50px !important;
+    }
+    .content-text p{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .seeForYourSelf-btn{
+        flex-direction: row;
+      justify-content: center;
+      width: 40%;
+      gap: 20px;
+      margin: auto;
+    }
+    .seeForYourSelf-btn button{
+        margin: 0;
+    }
+    .seeForYourSelf-btn .view-school-btn{
+        background-color: #de0179;
+    }
+}
+
+@media screen and (min-width: 765px) {
+    .content-text h1{
+        font-size: 40px !important;
+    }
+    .content-text p{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .seeForYourSelf-container{
+        height: 50vh;
+    }
+    .seeForYourSelf-content{
+        height: 50vh;
+    }
+    .content-text{
+        padding:130px 20px;
+    }
+}

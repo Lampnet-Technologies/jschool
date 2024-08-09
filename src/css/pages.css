@@ -34,6 +34,7 @@ h3 {
 .jchool--vision {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
+  margin-top: 120px;
 }
 h3,
 h1 {
@@ -238,14 +239,14 @@ h1 {
 
 /* Contact Page */
 .contact--container {
-  width: 80%;
+  width: 90%;
   margin: 30px auto;
 }
 .contact--header {
   text-align: center;
 }
 .contact--container input {
-  width: 100%;
+  width: 95%;
   border: none;
   background-color: white;
   outline: none;
@@ -258,7 +259,7 @@ h1 {
   font-weight: bold;
 }
 .contact--container textarea {
-  width: 100%;
+  width: 95%;
   height: 300px;
   border: none;
   outline: none;
@@ -292,7 +293,7 @@ h1 {
 }
 .contact--message {
   background-color: #0b6b39;
-  padding: 20px;
+  padding: 30px 20px !important;
   margin-top: 30px;
   color: white;
 }
@@ -321,6 +322,7 @@ h1 {
   }
   .jchool--vision {
     width: 60%;
+    margin-top: 100px !important;
   }
   .about--gallery {
     width: 20%;
@@ -464,6 +466,9 @@ h1 {
   .jschool--body {
     width: 50%;
   }
+  .jchool--vision{
+    margin-top: 160px;
+  }
   /* Teachers Section */
   .teachers--page--details {
     display: grid;
@@ -506,4 +511,5 @@ h1 {
   .google--map {
     height: 350px;
   }
+  
 }
