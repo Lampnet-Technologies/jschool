@@ -34,9 +34,9 @@ export default function WhyChooseUs() {
         </div>
 
         <div className="whyChooseUs-content">
-          <div className="whyChooseUs-text">
+          <div className="whyChooseUs-text ">
             <div
-              className="text-content"
+              className="text-content engage"
               data-aos="fade-right"
               data-aos-duration="1500"
             >

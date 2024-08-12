@@ -17,10 +17,12 @@ const slideTexts = [
 ];
 
 const Slider = () => {
+  const splideRef = useRef(null);
+  const typedRef = useRef(null);
+
   useEffect(() => {
     AOS.init();
-  });
-  const splideRef = useRef(null);
+  }, []);
 
   useEffect(() => {
     if (splideRef.current) {
@@ -32,7 +34,10 @@ const Slider = () => {
             ".typed-text"
           );
         if (textElement) {
-          new Typed(textElement, {
+          if (typedRef.current) {
+            typedRef.current.destroy();
+          }
+          typedRef.current = new Typed(textElement, {
             strings: [slideTexts[newIndex]],
             typeSpeed: 80,
             backSpeed: 50,
