@@ -13,7 +13,7 @@
   position: absolute;
 }
 .text-content{
-    margin-top: 80px;
+    margin-top: 60px !important;
     margin-left: 20px;
 }
 .whyChooseUs-text h2 {
