@@ -5,7 +5,8 @@ import Footer from "../components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Banner from "../components/banner/Banner";
-import BannerImage from '../assets/images/31.jpg'
+import BannerImage from "../assets/images/31.jpg";
+import CallToAction from "../components/call-to-action/CallToAction";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -88,7 +89,7 @@ export default function Contact() {
   return (
     <div>
       <div className="pages">
-      <Banner title= "Contact Us" image={BannerImage} />
+        <Banner title="Contact Us" image={BannerImage} />
         <div className="contact--page">
           <div className="contact--container">
             <div className="contact--address">
@@ -124,7 +125,9 @@ export default function Contact() {
 
             <div className="contact--message">
               {/* <div className="line"></div> */}
-              <h4 className="contact--header">You can also reach us by filling this form</h4>
+              <h4 className="contact--header">
+                You can also reach us by filling this form
+              </h4>
               <form onSubmit={handleSubmit}>
                 <div className="name--email">
                   <div className="input">
@@ -180,6 +183,8 @@ export default function Contact() {
               <ToastContainer />
             </div>
           </div>
+          <CallToAction/>
+          <br />
         </div>
         <Footer />
       </div>
