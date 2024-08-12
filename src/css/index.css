@@ -756,6 +756,9 @@ button {
   .slide-header {
     padding-top: 550px !important;
   }
+  .slide-header h2{
+    font-size: 40px !important;
+  }
   /* About section */
   .about--content {
     display: flex;
