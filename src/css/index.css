@@ -601,6 +601,7 @@ li {
 }
 .footer--logo {
   width: 50px;
+  margin-bottom: 10px;
 }
 .footer--links {
   display: grid;

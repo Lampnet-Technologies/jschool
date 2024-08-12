@@ -96,6 +96,7 @@ h1 {
 .article--img img {
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .news--container h2 {
   color: black;
@@ -105,14 +106,15 @@ h1 {
 }
 /* Single News Page */
 .singleNews--content {
-  width: 90%;
+  width: 85%;
   margin: 30px auto;
 }
 .singleNews--content h3 {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .singleNews--content img {
   border-radius: 8px;
+  margin-top: 10px;
 }
 .news--link {
   color: #ff2a2a;
@@ -159,6 +161,7 @@ h1 {
 }
 .admission--content-1 p {
   width: 70%;
+  margin-bottom: 20px;
 }
 .admission--intro {
   background-color: #208849;
@@ -478,7 +481,7 @@ h1 {
   /* Gallery Page */
   .gallery--page--details {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   /* Contact Section */
