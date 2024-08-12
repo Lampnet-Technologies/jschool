@@ -7,7 +7,8 @@ import "aos/dist/aos.css";
 import Image from "../assets/images/34.jpg";
 import { FaPenToSquare } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
-
+import Banner from "../components/banner/Banner";
+import BannerImage from '../assets/images/34.jpg'
 export default function Admission() {
   useEffect(() => {
     AOS.init();
@@ -186,6 +187,7 @@ export default function Admission() {
 
   return (
     <div className="pages">
+       <Banner title= "Admission" image={BannerImage} />
       <div className="admission--page">
         <div className="admission--container">
           <div className="admission--content-1">

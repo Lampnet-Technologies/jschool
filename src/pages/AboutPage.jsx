@@ -2,10 +2,12 @@ import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import "../css/pages.css";
 import RandomImage from "../assets/images/30.jpg";
+import BannerImage from '../assets/images/38.jpg'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Typed from "typed.js";
 import { Link } from "react-router-dom";
+import Banner from "../components/banner/Banner";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -27,6 +29,7 @@ export default function AboutPage() {
   return (
     <div>
       <div className="pages">
+        <Banner title= "About JSchool" image={BannerImage} />
         <div className="jschool--container">
           <div className="jschool--content">
             <div className="about--jschool">

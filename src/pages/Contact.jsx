@@ -4,6 +4,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Banner from "../components/banner/Banner";
+import BannerImage from '../assets/images/31.jpg'
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -86,6 +88,7 @@ export default function Contact() {
   return (
     <div>
       <div className="pages">
+      <Banner title= "Contact Us" image={BannerImage} />
         <div className="contact--page">
           <div className="contact--container">
             <div className="contact--address">

@@ -7,6 +7,8 @@ import Typed from "typed.js";
 import Footer from "../components/Footer";
 import BlockContent from "@sanity/block-content-to-react";
 import { FaArrowRight } from "react-icons/fa";
+import Banner from "../components/banner/Banner";
+import BannerImage from '../assets/images/37.jpg'
 
 export default function NewsPage() {
   const [posts, setPosts] = useState([]);
@@ -48,6 +50,7 @@ export default function NewsPage() {
 
   return (
     <div className="pages">
+       <Banner title= "JSchool News" image={BannerImage} />
       <div className="news--container">
         <h1 className="news--title">School  <span ref={el} /></h1>
         <br />

@@ -5,6 +5,8 @@ import "../css/pages.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Typed from "typed.js";
+import BannerImage from '../assets/images/43.png'
+import Banner from "../components/banner/Banner";
 
 
 export default function TeachersPage() {
@@ -28,6 +30,7 @@ export default function TeachersPage() {
   
   return (
     <div className="pages">
+       <Banner title= "Our Teachers" image={BannerImage} />
       <div className="teachers--page">
         <div className="teachers--page--content">
           <h1>Our <span ref={el}/></h1>

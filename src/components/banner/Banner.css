@@ -1,0 +1,32 @@
+.banner-container{
+    overflow: hidden;
+    position: relative;
+    margin-top: -76px;
+}
+.banner-container img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+.banner-content{
+    background-color: rgba(0, 0, 0,0.3);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70vh;
+    color: white;
+}
+.banner-content h1{
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+    font-size: 30px !important;
+}
+@media screen and (min-width:1120px) {
+    .banner-container img{
+        height: 100vh;
+    }
+    .banner-content{
+        height: 100vh;
+    }
+}

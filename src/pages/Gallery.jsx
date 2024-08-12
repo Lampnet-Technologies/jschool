@@ -5,6 +5,8 @@ import "../css/pages.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Typed from "typed.js";
+import BannerImage from '../assets/images/36.jpg'
+import Banner from "../components/banner/Banner";
 
 export default function Gallery() {
  useEffect(()=>{
@@ -27,6 +29,7 @@ export default function Gallery() {
 
   return (
     <div className="pages">
+      <Banner title= "JSchool Gallery" image={BannerImage} />
       <div className="gallery--page">
         <div className="gallery--page--content">
           <h1>School's <span ref={el} /></h1>
