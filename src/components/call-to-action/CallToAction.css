@@ -2,8 +2,9 @@
   width: 90%;
   margin: auto;
 }
-.call-to-action h1 {
-  text-align: center;
+.call-to-action h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 .apply-action-btn {
   display: flex;
@@ -22,10 +23,19 @@
   background-color: #1593d6;
 }
 @media screen and (min-width: 1120px) {
+  .call-to-action-content{
+    justify-content: center;
+    display: flex;
+  }
   .call-to-action-links {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 30px;
     margin-top: 40px;
+  }
+  .call-to-action h2{
+    width: 41%;
+    margin: auto;
+    margin-bottom: -20px !important;
   }
 }

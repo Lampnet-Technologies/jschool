@@ -11,10 +11,12 @@ import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import Support from "./pages/support/Support";
+import Pupil from "./pages/pupil/Pupil";
 
 function AppContent() {
   const location = useLocation();
-  const loginPaths = ["/login"];
+  const loginPaths = ["/login", '*'];
 
   return (
     <>
@@ -29,6 +31,8 @@ function AppContent() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/pupil" element={<Pupil />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

@@ -1,0 +1,24 @@
+.support-content{
+    width: 80%;
+    margin: 50px auto;
+}
+.banner-text{
+    color: red;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.support-text{
+    margin-bottom: 20px;
+}
+.support-text h4{
+    font-weight: 600;
+    font-size: 19px !important;
+}
+.support-text p{
+    font-size: 14px !important;
+}
+@media screen and (min-width: 1120px) {
+    .support-content{
+        width: 60%;
+    }
+}

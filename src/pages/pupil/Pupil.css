@@ -1,0 +1,38 @@
+.pupil-content{
+    width: 80%;
+    margin: auto;
+}
+
+.pupil-content{
+    margin-top: 30px;
+}
+.pupil-content img{
+    width: 100%;
+}
+.pupil-left{
+    margin-bottom: 20px;
+}
+.pupil-right p{
+    text-align: justify;
+}
+
+@media screen and (min-width:1120px) {
+    .pupil-content{
+        width: 70%;
+    }
+    .pupil-content .banner-text{
+        width: 70%;
+    }
+    .pupil-info{
+        display: flex;
+        gap: 30px;
+        margin: 50px 0;
+    }
+    .pupil-left{
+        width: 50%;
+    }
+    .pupil-right{
+        width: 50%;
+    }
+    
+}

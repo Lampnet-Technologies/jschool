@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import Typed from "typed.js";
 import { Link } from "react-router-dom";
 import Banner from "../components/banner/Banner";
-import CallToAction from '../components/call-to-action/CallToAction'
+import CallToAction from "../components/call-to-action/CallToAction";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -46,12 +46,42 @@ export default function AboutPage() {
                 <div className="jschool--body">
                   <h2>JSchool</h2>
                   <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Asperiores cum distinctio illo sit ipsam explicabo minima
-                    dolores facilis eveniet, possimus corrupti reprehenderit
-                    sunt expedita velit alias dolore ipsa repellat dignissimos
-                    necessitatibus. Laborum recusandae amet modi quidem. Beatae
-                    incidunt odio sapiente!
+                    Located in a safe and serene area of Opebi, Ikeja, our
+                    modern facility is fitted to support all students in
+                    developing learning and innovation skills, information media
+                    and technology skills, life and career skills that prepare
+                    them for a life of success. Students will learn in a
+                    positive and fulfilling learning environment where children
+                    learn and grow within a culture of support and where their
+                    needs of order, security, love, belonging, competence,
+                    personal power, freedom, and fun are met. The Court Hill
+                    College is a continuation of The Kids' Court School's
+                    12-year tradition of excellence in education provision. We
+                    have gained mastery in the provision of the Montessori,
+                    British, and Nigerian National curricula. We are proud to
+                    have a 100% pass rate for all our students seeking entry
+                    into primary or secondary schools across the globe since
+                    2009. We can only get better. We have a strong academic
+                    focus and our academic program is broad and challenging,
+                    based on a rich, robust, rigorous, and relevant curriculum
+                    that stimulates intellectual curiosity, a love of learning
+                    and academic excellence. We offer international GCSEs, WAEC,
+                    CAMBRIDGE CHECKPOINT EXAMINATIONS. Our co-curricular
+                    programme is diverse and promotes all-round personal
+                    development and a happy and healthy lifestyle. Our fully
+                    fitted classrooms support learning in the 21st century. Our
+                    teaching methodologies are child-centred yet cutting edge.
+                    Our well-trained, professional, and committed local and
+                    international faculty provide individualized support to
+                    students both in and out of class. No student is left behind
+                    in our school. We have spacious rooms including ICT suites,
+                    science laboratories, Art rooms, Music rooms and libraries.
+                    Our facility also houses our swimming pools, Tennis courts
+                    and outdoor areas. The college will also house Makerspace
+                    areas and Collaboration centres where the students get
+                    firsthand experience in robotics, coding, as well as 3D
+                    printing. All these give our students the opportunity to
+                    express their skills and talents.
                   </p>
                 </div>
                 <div
@@ -136,8 +166,11 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <br /><br /><br /><br />
-            <CallToAction/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <CallToAction />
           </div>
         </div>
       </div>

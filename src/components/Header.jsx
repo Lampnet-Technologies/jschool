@@ -16,7 +16,6 @@ export default function Header() {
     setShowMore(false);
   };
 
-
   const handleShowMore = () => {
     setShowMore(!showMore);
   };
@@ -68,7 +67,17 @@ export default function Header() {
                       Events & News
                     </Link>
                   </li>
+                  <li>
+                    <Link className="link" to="/pupil" onClick={closeMenu}>
+                      Pupil
+                    </Link>
+                  </li>
 
+                  <li>
+                    <Link className="link" to="/support" onClick={closeMenu}>
+                      Student support
+                    </Link>
+                  </li>
                   <li>
                     <Link className="link" to="/contact" onClick={closeMenu}>
                       Contact
@@ -127,6 +136,18 @@ export default function Header() {
                         Events & News
                       </Link>
                     </li>
+                    <li>
+                      <Link className="link" to="/pupil" onClick={closeMenu}>
+                        Pupil
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link className="link" to="/support" onClick={closeMenu}>
+                        Student support
+                      </Link>
+                    </li>
+
                     <li>
                       <Link className="link" to="/contact" onClick={closeMenu}>
                         Contact
