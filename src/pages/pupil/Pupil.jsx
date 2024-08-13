@@ -20,7 +20,7 @@ export default function Pupil() {
               <img src={BannerImage} alt="student umage" />
               <div className="student-name">
                 <p>John Mary</p>
-                <p>Head Girl</p>
+                <p className="post">Head Girl</p>
               </div>
             </div>
             <div className="pupil-right">

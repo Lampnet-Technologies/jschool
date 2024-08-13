@@ -12,6 +12,9 @@
 .pupil-left{
     margin-bottom: 20px;
 }
+.pupil-left .post{
+    font-weight: 600;
+}
 .pupil-right p{
     text-align: justify;
 }
