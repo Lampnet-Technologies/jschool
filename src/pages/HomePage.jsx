@@ -30,7 +30,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Welcome from "../components/welcome/Welcome";
 import WhyChooseUs from "../components/whyChooseUs/WhyChooseUs";
-import CallToAction from "../components/call-to-action/CallToAction";
 import SeeForYourSelf from "../components/seeForYourSelf/SeeForYourSelf";
 
 export default function HomePage() {
@@ -154,7 +153,6 @@ export default function HomePage() {
       <Slider />
       <Welcome />
       <WhyChooseUs />
-      <CallToAction />
       <SeeForYourSelf />
       {/* <section className="about--section ">
         <div className="about--content">
@@ -479,7 +477,7 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      <section className="community">
+      {/* <section className="community">
         <div className="community--content">
           <div className="community--background">
             <div
@@ -519,12 +517,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* <section className="parents--corner">
+      <section className="parents--corner">
         <div className="parents--container">
           <div className="parent--header">
-            <div className="line"></div>
             <h4>Parent’s Corner</h4>
           </div>
           <div className="parent--card--wrapper">
@@ -572,7 +569,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* <section className="gallery">
         <div className="gallery--container">

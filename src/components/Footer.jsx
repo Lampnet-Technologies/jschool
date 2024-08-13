@@ -129,9 +129,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <br />
-          <br />
-          <div className="footer--content">
+          {/* <br />
+          <br /> */}
+          {/* <div className="footer--content">
             <div className="news-letter">
               <h4>Subscribe to Our Newsletter</h4>
               <p>For latest news about school and more</p>
@@ -158,7 +158,7 @@ export default function Footer() {
               <br />
               <p>Copyright © School Management System</p>
             </div>
-          </div>
+          </div> */}
         </div>
         <ToastContainer />
       </div>

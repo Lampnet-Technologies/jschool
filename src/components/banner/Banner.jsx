@@ -9,6 +9,9 @@ export default function Banner(props) {
         <div className="banner-content">
           <h1>{props.title}</h1>
         </div>
+        <div className="banner-play">
+          {props.play}
+        </div>
       </div>
     </div>
   );

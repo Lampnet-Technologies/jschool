@@ -591,8 +591,8 @@ li {
 }
 /* Footer Section */
 .footer {
-  background-color: #b8d1c2;
-  color: black;
+  background-color: #1C1C1C;
+  color: white;
 }
 .footer--container {
   width: 90%;
@@ -610,7 +610,7 @@ li {
 }
 .footer--links .links {
   text-decoration: none;
-  color: black;
+  color: white;
   transition: 0.3s ease;
 }
 .footer--links .links:hover {
@@ -631,7 +631,7 @@ li {
 .footer--icons .school--socials:hover {
   transform: translateY(-7px);
 }
-.news-letter {
+/* .news-letter {
   margin-bottom: 20px;
   border: 2px solid #0b6b39;
   border-radius: 8px;
@@ -661,7 +661,7 @@ button {
   background-color: #ff2a2a;
   color: white;
   border-radius: 5px;
-}
+} */
 /* Desktop View */
 @media screen and (min-width: 1120px) {
   .menu {

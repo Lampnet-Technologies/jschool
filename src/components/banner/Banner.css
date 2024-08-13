@@ -35,4 +35,11 @@
     position: absolute;
     top: 420px;
   }
+  .banner-play{
+    color: white;
+    left: 730px;
+    position: absolute;
+    top: 380px;
+    font-size: 40px;
+  }
 }

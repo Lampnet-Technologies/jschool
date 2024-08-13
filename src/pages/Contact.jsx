@@ -94,13 +94,12 @@ export default function Contact() {
           <div className="contact--container">
             <div className="contact--address">
               <div className="contact--text">
-                <div className="line"></div>
-                <h4>Contact</h4>
-                <p>
+                <h4>Contact Details:</h4>
+                {/* <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Doloremque voluptate assumenda vel autem a nesciunt quo sequi,
                   aperiam nemo, alias amet in, maxime aliquid ad?
-                </p>
+                </p> */}
 
                 <div className="contact--location">
                   <p>
@@ -126,8 +125,9 @@ export default function Contact() {
             <div className="contact--message">
               {/* <div className="line"></div> */}
               <h4 className="contact--header">
-                You can also reach us by filling this form
+                Get in Touch
               </h4>
+              <br />
               <form onSubmit={handleSubmit}>
                 <div className="name--email">
                   <div className="input">
@@ -162,6 +162,7 @@ export default function Contact() {
                     type="text"
                     value={form.subject}
                     name="subject"
+                    placeholder="subject"
                     onChange={handleChange}
                   />
                   {errors.subject && <p className="error">{errors.subject}</p>}

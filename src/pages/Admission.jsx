@@ -8,7 +8,8 @@ import Image from "../assets/images/34.jpg";
 import { FaPenToSquare } from "react-icons/fa6";
 import { FaEnvelope } from "react-icons/fa";
 import Banner from "../components/banner/Banner";
-import BannerImage from '../assets/images/34.jpg'
+import BannerImage from "../assets/images/34.jpg";
+import CallToAction from "../components/call-to-action/CallToAction";
 export default function Admission() {
   useEffect(() => {
     AOS.init();
@@ -187,10 +188,10 @@ export default function Admission() {
 
   return (
     <div className="pages">
-       <Banner title= "Admission" image={BannerImage} />
+      <Banner title="Admission" image={BannerImage} />
       <div className="admission--page">
         <div className="admission--container">
-          <div className="admission--content-1">
+          {/* <div className="admission--content-1">
             <h1>Admission</h1>
             <p>
               Welcome to our Admission page we promise to make your stay a
@@ -212,20 +213,37 @@ export default function Admission() {
 
           <div className="admission--steps">
             <div className="admission--steps--content">
-              <img src={Image} className="img" data-aos="fade-right" data-aos-duration="1500" />
-              
-              <div className="steps" data-aos="fade-left" data-aos-duration="1500">
+              <img
+                src={Image}
+                className="img"
+                data-aos="fade-right"
+                data-aos-duration="1500"
+              />
+
+              <div
+                className="steps"
+                data-aos="fade-left"
+                data-aos-duration="1500"
+              >
                 <h2>3 key steps to join our school</h2>
-                <p><FaPenToSquare className="admission--icon"/> Fill the application form below</p>
-                <p><FaEnvelope className="admission--icon"/> Check your email for application details</p>
-                <p><FaPenToSquare className="admission--icon"/> Write our entrance examination</p>
+                <p>
+                  <FaPenToSquare className="admission--icon" /> Fill the
+                  application form below
+                </p>
+                <p>
+                  <FaEnvelope className="admission--icon" /> Check your email
+                  for application details
+                </p>
+                <p>
+                  <FaPenToSquare className="admission--icon" /> Write our
+                  entrance examination
+                </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="admission--content-3">
-            <div className="line"></div>
-            <h1>Apply as a Student</h1>
+            <h1 className="banner-text">Apply below to join Jenny school</h1>
             <form onSubmit={handleApplySubmit}>
               <div className="form--inputs">
                 <div className="input">
@@ -433,7 +451,11 @@ export default function Admission() {
             </div>
           </div>
         </div>
+        <br />
+        <br />
+        <CallToAction />
       </div>
+      <br />
       <ToastContainer />
       <Footer />
     </div>

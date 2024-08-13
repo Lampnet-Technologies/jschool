@@ -5,15 +5,22 @@
     background-size: cover;
 }
 .seeForYourSelf-content{
-    background-color: rgba(0, 0, 0,0.4);
+    background-color: rgb(12, 47, 112, 0.6);
     width: 100%;
     height: 60vh;
     margin-top: 50px;
     color: white;
 }
 .content-text{
-  padding:90px 20px;
+  padding: 120px 20px;
   text-align: center;
+}
+.content-text p{
+    font-size: 15px;
+    opacity: .9;
+}
+.content-text h1{
+    font-size: 26px !important;
 }
 .seeForYourSelf-btn{
     display: flex;
@@ -23,7 +30,7 @@
 .seeForYourSelf-btn button{
     width: 30%;
     margin: 0 auto 10px;
-    background-color:#4DABF5;
+    background-color:yellow;
     padding: 10px;
     border-radius: 5px;
 }
@@ -33,6 +40,10 @@
 }
 .seeForYourSelf-btn .link{
     color: white;
+}
+.view-school-btn{
+    background-color: transparent !important;
+    border: 1px solid yellow;
 }
 
 @media screen and (min-width:1120px) {
@@ -55,7 +66,7 @@
         margin: 0;
     }
     .seeForYourSelf-btn .view-school-btn{
-        background-color: #de0179;
+        width: 40%;
     }
 }
 

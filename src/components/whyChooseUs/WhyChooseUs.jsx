@@ -3,6 +3,9 @@ import "../whyChooseUs/WhyChooseUs.css";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import RandomImage from "../../assets/images/support-banner.svg";
+import BannerImage from "../../assets/images/Pupil-banner.svg";
+import CallToAction from "../call-to-action/CallToAction";
 
 export default function WhyChooseUs() {
   useEffect(() => {
@@ -33,6 +36,34 @@ export default function WhyChooseUs() {
           </div>
         </div>
 
+        <div className="about-state-of-art">
+          <div
+            className="state-of-art-left"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            <img src={RandomImage} alt="" className="image-left" />
+            <img src={BannerImage} alt="" className="image-right" />
+          </div>
+          <div
+            className="state-of-art-right"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          >
+            <h4>State-of-the-Art Facilities</h4>
+            <p>
+              Our school boasts modern and well-equipped classrooms,
+              state-of-the-art science and computer laboratories, a well-stocked
+              library, and other facilities.
+            </p>
+            <p>
+              Our school boasts modern and well-equipped classrooms,
+              state-of-the-art science and computer laboratories, a well-stocked
+              library, and other facilities.
+            </p>
+          </div>
+        </div>
+
         <div className="whyChooseUs-content">
           <div className="whyChooseUs-text ">
             <div
@@ -56,7 +87,11 @@ export default function WhyChooseUs() {
             </div>
           </div>
         </div>
-
+        <br />
+        <br />
+        <br />
+        <CallToAction />
+        <br />
         <div className="whyChooseUs-content">
           <div className="whyChooseUs-text">
             <div
