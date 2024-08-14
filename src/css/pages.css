@@ -8,9 +8,14 @@ body {
 }
 input {
   caret-color: #ff2a2a;
+  outline: none;
 }
 textarea {
   caret-color: #ff2a2a;
+  outline: none;
+}
+button{
+  border: none;
 }
 h4,
 h2,
