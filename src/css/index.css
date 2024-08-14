@@ -672,7 +672,8 @@ button {
     display: flex;
     gap: 30px;
     position: relative;
-    right: 130px;
+    right: 160px;
+    top: 10px;
   }
   .login--desktop {
     display: block;
