@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import ReactModal from 'react-modal';
-import './Banner.css';
+import React, { useState } from "react";
+import ReactModal from "react-modal";
+import "./Banner.css";
 
-ReactModal.setAppElement('#root');
+ReactModal.setAppElement("#root");
 
 export default function Banner(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -23,7 +23,7 @@ export default function Banner(props) {
           <h1>{props.title}</h1>
         </div>
         <div className="banner-play" onClick={openModal}>
-         {props.play}
+          {props.play}
         </div>
       </div>
       <ReactModal
