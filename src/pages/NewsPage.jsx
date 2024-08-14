@@ -6,13 +6,34 @@ import { Link } from "react-router-dom";
 import Typed from "typed.js";
 import Footer from "../components/Footer";
 import BlockContent from "@sanity/block-content-to-react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaArrowUp } from "react-icons/fa";
 import Banner from "../components/banner/Banner";
-import BannerImage from '../assets/images/37.jpg'
+import BannerImage from "../assets/images/37.jpg";
 import CallToAction from "../components/call-to-action/CallToAction";
 
 export default function NewsPage() {
   const [posts, setPosts] = useState([]);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     AOS.init();
@@ -39,7 +60,7 @@ export default function NewsPage() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['News and Events', 'Blog'],
+      strings: ["News and Events", "Blog"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -51,9 +72,11 @@ export default function NewsPage() {
 
   return (
     <div className="pages">
-       <Banner title= "JSchool News" image={BannerImage} />
+      <Banner title="JSchool News" image={BannerImage} />
       <div className="news--container">
-        <h1 className="news--title">School  <span ref={el} /></h1>
+        <h1 className="news--title">
+          School <span ref={el} />
+        </h1>
         <br />
         <div className="news">
           {posts.map((post) => (
@@ -64,33 +87,40 @@ export default function NewsPage() {
                   className="img"
                   alt={post.title}
                 />
-                 <div className="body">
-                    <BlockContent
-                      blocks={post.body}
-                      projectId="qdccjb4j"
-                      dataset="production"
-                    />
-                  </div>
+                <div className="body">
+                  <BlockContent
+                    blocks={post.body}
+                    projectId="qdccjb4j"
+                    dataset="production"
+                  />
+                </div>
               </div>
               <br />
               <h2>{post.title}</h2>
-                <Link className="news--link" to={`/news/${post.slug.current}`}>
-                  See More <FaArrowRight/>
-                </Link>
+              <Link className="news--link" to={`/news/${post.slug.current}`}>
+                See More <FaArrowRight />
+              </Link>
             </article>
           ))}
         </div>
         <CallToAction
-            icon={<FaArrowRight />}
-            tour="Take a virtual tour"
-            pupil="Hear from our students"
-            contact="Contact us"
-            admissionOverView="Admission Overview"
-            news="News & events"
-            support="Learning support"
-          />
+          icon={<FaArrowRight />}
+          tour="Take a virtual tour"
+          pupil="Hear from our students"
+          contact="Contact us"
+          admissionOverView="Admission Overview"
+          news="News & events"
+          support="Learning support"
+        />
       </div>
-      <Footer/>
+      <Footer />
+      <div className="scroll--up">
+        {isVisible && (
+          <button onClick={scrollToTop}>
+            <FaArrowUp />
+          </button>
+        )}
+      </div>
     </div>
   );
 }

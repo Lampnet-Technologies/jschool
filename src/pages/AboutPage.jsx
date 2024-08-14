@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import "../css/pages.css";
 import RandomImage from "../assets/images/30.jpg";
@@ -12,6 +12,7 @@ import PrincipleImage from "../assets/images/principle.svg";
 import CallToAction from "../components/call-to-action/CallToAction";
 import {
   FaArrowRight,
+  FaArrowUp,
   FaFacebook,
   FaGooglePlusG,
   FaLinkedin,
@@ -23,6 +24,27 @@ import {
 import { FaX } from "react-icons/fa6";
 
 export default function AboutPage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -258,6 +280,13 @@ export default function AboutPage() {
         </div>
       </div>
       <Footer />
+      <div className="scroll--up">
+        {isVisible && (
+          <button onClick={scrollToTop}>
+            <FaArrowUp />
+          </button>
+        )}
+      </div>
     </div>
   );
 }

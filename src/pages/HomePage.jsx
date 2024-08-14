@@ -51,6 +51,7 @@ export default function HomePage() {
       behavior: "smooth",
     });
   };
+  
   useEffect(() => {
     AOS.init();
     client
