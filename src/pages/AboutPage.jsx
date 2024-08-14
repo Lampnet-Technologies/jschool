@@ -29,7 +29,7 @@ export default function AboutPage() {
 
   return (
     <div className="pages">
-      <Banner play={<FaPlay />} image={BannerImage} title="About JSchool" />
+      <Banner play={<Link className="banner-link" to='https://youtu.be/qccyDMZASbA'><FaPlay/></Link>} image={BannerImage} title="About JSchool" />
       <div className="jschool--container">
         <div className="jschool--content">
           <div className="about--jschool">
