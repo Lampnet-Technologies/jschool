@@ -3,12 +3,6 @@ import Slider from "../components/Carousel";
 import {
   FaArrowRight,
   FaArrowUp,
-  FaFacebook,
-  FaGooglePlusG,
-  FaGraduationCap,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
 } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import AboutImage from "../assets/images/43.png";
@@ -51,7 +45,7 @@ export default function HomePage() {
       behavior: "smooth",
     });
   };
-  
+
   useEffect(() => {
     AOS.init();
     client

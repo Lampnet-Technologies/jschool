@@ -30,8 +30,8 @@
 .seeForYourSelf-btn button{
     width: 30%;
     margin: 0 auto 10px;
-    background-color:yellow;
-    padding: 10px;
+    background-color:rgb(219, 219, 16);
+    padding: 13px;
     border-radius: 5px;
 }
 .seeForYourSelf-btn button:active{

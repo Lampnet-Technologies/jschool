@@ -5,7 +5,7 @@
 }
 .banner-container img {
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   object-fit: cover;
   object-position: top;
 }
@@ -14,7 +14,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   color: white;
 }
 .banner-content h1 {
@@ -57,7 +57,7 @@
 .banner-play {
   color: white;
   left: 170px;
-  top: 200px;
+  top: 270px;
   position: absolute;
   font-size: 50px;
 }
