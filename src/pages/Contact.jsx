@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaArrowRight, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import { ToastContainer, toast } from "react-toastify";
@@ -184,7 +184,15 @@ export default function Contact() {
               <ToastContainer />
             </div>
           </div>
-          <CallToAction/>
+          <CallToAction
+            icon={<FaArrowRight />}
+            tour="Take a virtual tour"
+            pupil="Hear from our students"
+            contact="Contact us"
+            admissionOverView="Admission Overview"
+            news="News & events"
+            support="Learning support"
+          />
           <br />
         </div>
         <Footer />

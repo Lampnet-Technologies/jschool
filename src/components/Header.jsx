@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import JschLogo from "../assets/images/Jsch Logo.png";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaLock } from "react-icons/fa";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,7 +89,8 @@ export default function Header() {
             <div className="login--desktop">
               <div className="portal--btn">
                 <button onClick={closeMenu}>
-                  <Link to="/login" className="link">
+                  <Link to="/login" className="link login-portal">
+                  <FaLock/>
                     Portal Login
                   </Link>
                 </button>

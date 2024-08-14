@@ -6,6 +6,9 @@
   font-weight: 600;
   margin-bottom: 20px;
 }
+.call-to-action-content{
+  margin-top: 40px;
+}
 .apply-action-btn {
   display: flex;
   justify-content: space-between;
@@ -22,20 +25,26 @@
 .three {
   background-color: #1593d6;
 }
+.four {
+  background-color: #153cd6;
+}
 @media screen and (min-width: 1120px) {
   .call-to-action-content{
-    justify-content: center;
-    display: flex;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    /* justify-content: center; */
   }
-  .call-to-action-links {
+  /* .call-to-action-links {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-top: 40px;
-  }
+  } */
   .call-to-action h2{
-    width: 41%;
+    /* width: 41%;
     margin: auto;
-    margin-bottom: -20px !important;
+    margin-bottom: -20px !important; */
+    margin-bottom: -20px;
   }
 }

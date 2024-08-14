@@ -9,6 +9,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import { FaArrowRight } from "react-icons/fa";
 import Banner from "../components/banner/Banner";
 import BannerImage from '../assets/images/37.jpg'
+import CallToAction from "../components/call-to-action/CallToAction";
 
 export default function NewsPage() {
   const [posts, setPosts] = useState([]);
@@ -79,6 +80,15 @@ export default function NewsPage() {
             </article>
           ))}
         </div>
+        <CallToAction
+            icon={<FaArrowRight />}
+            tour="Take a virtual tour"
+            pupil="Hear from our students"
+            contact="Contact us"
+            admissionOverView="Admission Overview"
+            news="News & events"
+            support="Learning support"
+          />
       </div>
       <Footer/>
     </div>

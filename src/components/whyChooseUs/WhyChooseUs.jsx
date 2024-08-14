@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import RandomImage from "../../assets/images/support-banner.svg";
 import BannerImage from "../../assets/images/Pupil-banner.svg";
 import CallToAction from "../call-to-action/CallToAction";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function WhyChooseUs() {
   useEffect(() => {
@@ -90,7 +91,15 @@ export default function WhyChooseUs() {
         <br />
         <br />
         <br />
-        <CallToAction />
+        <CallToAction
+            icon={<FaArrowRight />}
+            tour="Take a virtual tour"
+            pupil="Hear from our students"
+            contact="Contact us"
+            admissionOverView="Admission Overview"
+            news="News & events"
+            support="Learning support"
+          />
         <br />
         <div className="whyChooseUs-content">
           <div className="whyChooseUs-text">

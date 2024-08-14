@@ -1,0 +1,37 @@
+.admissionOverview-content{
+    width: 80%;
+    margin: 30px auto;
+}
+.admissionOverview-left p{
+    margin-bottom: 10px;
+}
+.admissionOverview-steps .banner-text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+.admissionOverview-icon{
+    font-size: 21px;
+}
+.admissionOverview-steps-content{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.admissionOverview-content button{
+    border: none;
+    background-color: #FEB500;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.admissionOverview-content button:active{
+    background-color: #aa872f;
+}
+
+@media screen and (min-width:1120px) {
+    .admissionOverview-steps .banner-text{
+        margin-bottom: 10px;
+    margin-top: 20px;
+    }
+}

@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import JsLogo from "../assets/images/Jsch Logo.png";
+import JsLogo from "../assets/images/footer-logo.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -77,21 +77,32 @@ export default function Footer() {
     <div>
       <div className="footer">
         <div className="footer--container">
+        <img src={JsLogo} className="footer--logo" alt="JSchool logo" />
           <div className="footer--content">
-            <img src={JsLogo} className="footer--logo" alt="JSchool logo" />
             {/* <p>
               JSchool is a fully accredited, independent, international school
               in Lagos, Nigeria.
             </p> */}
             <br />
             <div className="footer--location">
+              <p>Jenny School</p>
+              <br />
               <p>
                 <FaLocationDot /> 1, Jenny school road, Ekete, Delta State,
                 Nigeria.
               </p>
+              <br />
               <p>
                 <FaPhoneAlt /> +234 09069417489
               </p>
+              <br />
+              <div className="footer--icons">
+                <FaFacebook className="school--socials" />
+                <FaTwitter className="school--socials" />
+                <FaLinkedin className="school--socials" />
+                <FaYoutube className="school--socials" />
+                <FaGooglePlusG className="school--socials" />
+              </div>
             </div>
           </div>
           <br />
@@ -112,19 +123,31 @@ export default function Footer() {
                 <Link to="/gallery" className="links">
                   Gallery
                 </Link>
-              </div>
-              <div className="footer--links">
-                <Link to="/admission" className="links">
+                <Link to="/overview" className="links">
                   Admission
                 </Link>
-                {/* <Link to="/career" className="links">
-                  Career
-                </Link> */}
                 <Link to="/news" className="links">
                   News & Events
                 </Link>
-                <Link to="/teachers" className="links">
+                {/* <Link to="/teachers" className="links">
                   Teachers
+                </Link> */}
+              </div>
+              <div className="footer--links">
+                <Link to="/admission" className="links">
+                  Application form
+                </Link>
+                <Link to="/overview" className="links">
+                  How to apply
+                </Link>
+                <Link to="/gallery" className="links">
+                Take a virtual tour
+                </Link>
+                <Link to="/pupil" className="links">
+                Hear from our students
+                </Link>
+                <Link to="/support" className="links">
+                Support learning
                 </Link>
               </div>
             </div>
@@ -146,20 +169,10 @@ export default function Footer() {
               </form>
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
-            <div className="footer--socials">
-              <h2>Follow Us</h2>
-              <div className="footer--icons">
-                <FaFacebook className="school--socials" />
-                <FaTwitter className="school--socials" />
-                <FaLinkedin className="school--socials" />
-                <FaYoutube className="school--socials" />
-                <FaGooglePlusG className="school--socials" />
-              </div>
-              <br />
-              <p>Copyright © School Management System</p>
-            </div>
+           
           </div> */}
         </div>
+        <p className="copyright">Copyright © School Management System</p>
         <ToastContainer />
       </div>
     </div>

@@ -8,9 +8,10 @@ import "aos/dist/aos.css";
 import Typed from "typed.js";
 import { Link } from "react-router-dom";
 import Banner from "../components/banner/Banner";
-import PrincipleImage from '../assets/images/principle.svg'
+import PrincipleImage from "../assets/images/principle.svg";
 import CallToAction from "../components/call-to-action/CallToAction";
 import {
+  FaArrowRight,
   FaFacebook,
   FaGooglePlusG,
   FaLinkedin,
@@ -28,7 +29,7 @@ export default function AboutPage() {
 
   return (
     <div className="pages">
-      <Banner play={<FaPlay />} image={BannerImage} title='About JSchool'/>
+      <Banner play={<FaPlay />} image={BannerImage} title="About JSchool" />
       <div className="jschool--container">
         <div className="jschool--content">
           <div className="about--jschool">
@@ -245,7 +246,15 @@ export default function AboutPage() {
               </div>
             </div>
           </section>
-          <CallToAction />
+          <CallToAction
+            icon={<FaArrowRight />}
+            tour="Take a virtual tour"
+            pupil="Hear from our students"
+            contact="Contact us"
+            admissionOverView="Admission Overview"
+            news="News & events"
+            support="Learning support"
+          />
         </div>
       </div>
       <Footer />

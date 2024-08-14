@@ -36,20 +36,18 @@ span {
   border-radius: 5px;
   padding: 10px;
   width: 50%;
-  background-color: #0b6b39;
+  background-color: #FEB500;
   color: white;
   font-weight: bold;
   transition: 0.3s ease;
   margin-bottom: 30px;
 }
-.btn:hover {
-  background-color: white;
-  color: #0b6b39;
-  border: 2px solid #0b6b39;
+.btn:active {
+  background-color: yellow;
 }
 .btn-2 {
-  background-color: white;
-  color: #0b6b39;
+  background-color: #FEB500;
+  color: white;
   border: 2px solid #0b6b39;
   font-weight: bold;
   padding: 10px;
@@ -58,10 +56,8 @@ span {
   transition: 0.3s ease;
   outline: none;
 }
-.btn-2:hover {
-  background-color: #0b6b39;
-  border: none;
-  color: white;
+.btn-2:active {
+  background-color: yellow;
 }
 .img {
   width: 100%;
@@ -141,37 +137,17 @@ textarea {
 }
 
 /* Login Links styling */
-.login--mobile {
-  margin-top: 10px;
+.login-portal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
 }
 .login--desktop {
   display: none;
 }
-.login--links li {
-  line-height: 33px;
-  transition: 0.3s ease;
-}
-.login--links .link {
-  color: white;
-  transition: 0.3s ease;
-}
-.login--links .link:hover {
-  color: #0b6b39;
-}
-.login--mobile .enroll--btn button {
-  background-color: #0b6b39;
-  padding: 8px;
-  width: 100px;
-  text-align: center;
-  border-radius: 5px;
-}
-.login--mobile .enroll--btn .link {
-  color: white;
-}
-.link--enroll {
-  color: white;
-  text-decoration: none;
-}
+
 /* NavBar Links styling */
 .desktop {
   display: none;
@@ -556,15 +532,15 @@ li {
 .community--icon:hover {
   transform: translateY(-10px);
 }
-.community--news-letter {
+/* .community--news-letter {
   border: 5px solid #8e4926;
   border-radius: 8px;
   padding: 20px;
   width: 80%;
   margin: 20px auto;
-}
-.community--news-letter button {
-  background-color: #0b6b39;
+} */
+/* .community--news-letter button {
+  background-color: #FEB500;
   color: white;
   border-radius: 5px;
   transition: 0.3s ease;
@@ -573,7 +549,7 @@ li {
   border: 2px solid #0b6b39;
   background-color: white;
   color: #0b6b39;
-}
+} */
 /* Gallery Section */
 .gallery--container {
   width: 90%;
@@ -595,7 +571,7 @@ li {
   color: white;
 }
 .footer--container {
-  width: 90%;
+  width: 85%;
   margin: auto;
   padding: 40px 0;
 }
@@ -605,7 +581,7 @@ li {
 }
 .footer--links {
   display: grid;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 40px;
 }
 .footer--links .links {
@@ -615,6 +591,9 @@ li {
 }
 .footer--links .links:hover {
   color: #ff2a2a;
+}
+.footer--location p{
+  font-size: 18px;
 }
 .footer--icons {
   display: flex;
@@ -630,6 +609,9 @@ li {
 }
 .footer--icons .school--socials:hover {
   transform: translateY(-7px);
+}
+.copyright{
+  text-align: center;
 }
 /* .news-letter {
   margin-bottom: 20px;
@@ -699,9 +681,14 @@ button {
     position: relative;
     right: -180px;
   }
-  .login--desktop .enroll--btn .link {
-    color: white !important;
+  .portal--btn button{
+    border: none !important;
+    outline: none;
   }
+  .portal--btn button:active{
+    background-color: #ec2c2c;
+  }
+
   .desktop li {
     color: #ff2a2a;
     font-size: 20px;
@@ -834,15 +821,17 @@ button {
     gap: 30px;
     padding-top: 50px;
   }
-  .footer--content {
-    width: 50%;
-  }
   .footer--content p {
     font-size: 21px;
   }
   .vital--links {
     display: flex;
     gap: 70px;
+  }
+  .footer--logo{
+    width: 100px;
+    margin-top: -50px;
+    margin-right: 30px;
   }
 }
 
@@ -869,4 +858,13 @@ button {
     display: flex;
     gap: 70px;
   }
+  .footer--container{
+    display: flex;
+    gap: 30px;
+    align-items: start;
+  }
+  .footer--logo{
+    margin-top: 25px;
+  }
+
 }

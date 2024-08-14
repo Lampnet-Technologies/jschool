@@ -13,10 +13,11 @@ import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Support from "./pages/support/Support";
 import Pupil from "./pages/pupil/Pupil";
+import AdmissionOverview from "./pages/overview/AdmissionOverview";
 
 function AppContent() {
   const location = useLocation();
-  const loginPaths = ["/login", '*'];
+  const loginPaths = ["/login"];
 
   return (
     <>
@@ -33,6 +34,7 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/support" element={<Support />} />
         <Route path="/pupil" element={<Pupil />} />
+        <Route path="/overview" element={<AdmissionOverview />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

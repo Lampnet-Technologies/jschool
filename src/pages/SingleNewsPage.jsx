@@ -5,8 +5,6 @@ import BlockContent from "@sanity/block-content-to-react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Banner from "../components/banner/Banner";
-import BannerImage from '../assets/images/Pupil-banner.svg'
 
 export default function SingleNewsPage() {
   const [singleNewsPost, setSingleNewsPost] = useState(null);
@@ -57,7 +55,6 @@ export default function SingleNewsPage() {
   return (
     <div className="singleNews pages">
       <div className="singleNews--content">
-        <Banner image={BannerImage}/>
         <section>
         <Link to="/news" className="news--link">
             <FaArrowLeft />

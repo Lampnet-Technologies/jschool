@@ -10,9 +10,7 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa";
-import {
-  FaX,
-} from "react-icons/fa6";
+import { FaX } from "react-icons/fa6";
 import AboutImage from "../assets/images/43.png";
 import PrincipalImage from "../assets/images/37.jpg";
 import RandomImage from "../assets/images/30.jpg";
@@ -33,7 +31,6 @@ import WhyChooseUs from "../components/whyChooseUs/WhyChooseUs";
 import SeeForYourSelf from "../components/seeForYourSelf/SeeForYourSelf";
 
 export default function HomePage() {
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

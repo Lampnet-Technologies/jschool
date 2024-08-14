@@ -31,15 +31,15 @@
     height: 100vh;
   }
   .banner-content h1 {
-    left: 700px;
+    left: 580px;
     position: absolute;
-    top: 420px;
+    top: 400px;
   }
   .banner-play{
     color: white;
-    left: 730px;
+    left: 650px;
     position: absolute;
-    top: 380px;
-    font-size: 40px;
+    top: 340px;
+    font-size: 50px;
   }
 }

@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import Typed from "typed.js";
 import BannerImage from '../assets/images/36.jpg'
 import Banner from "../components/banner/Banner";
+import CallToAction from "../components/call-to-action/CallToAction";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Gallery() {
  useEffect(()=>{
@@ -44,6 +46,15 @@ export default function Gallery() {
             ))}
           </div>
         </div>
+        <CallToAction
+            icon={<FaArrowRight />}
+            tour="Take a virtual tour"
+            pupil="Hear from our students"
+            contact="Contact us"
+            admissionOverView="Admission Overview"
+            news="News & events"
+            support="Learning support"
+          />
       </div>
       <Footer />
     </div>

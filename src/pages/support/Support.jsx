@@ -4,6 +4,7 @@ import BannerImage from "../../assets/images/support-banner.svg";
 import CallToAction from "../../components/call-to-action/CallToAction";
 import "./Support.css";
 import Footer from "../../components/Footer";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Support() {
   return (
@@ -105,7 +106,15 @@ export default function Support() {
             </p>
           </div>
         </div>
-        <CallToAction />
+        <CallToAction
+          about="About us"
+          icon={<FaArrowRight />}
+          tour="Take a virtual tour"
+          contact="Contact us"
+          apply="How to apply"
+          news="News & events"
+          pupil="Hear from our students"
+        />
         <br /> <br />
         <Footer />
       </div>

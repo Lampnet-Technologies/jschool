@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "../assets/images/34.jpg";
 import { FaPenToSquare } from "react-icons/fa6";
-import { FaEnvelope } from "react-icons/fa";
+import { FaArrowRight, FaEnvelope } from "react-icons/fa";
 import Banner from "../components/banner/Banner";
 import BannerImage from "../assets/images/34.jpg";
 import CallToAction from "../components/call-to-action/CallToAction";
@@ -453,7 +453,15 @@ export default function Admission() {
         </div>
         <br />
         <br />
-        <CallToAction />
+        <CallToAction
+            icon={<FaArrowRight />}
+            tour="Take a virtual tour"
+            pupil="Hear from our students"
+            contact="Contact us"
+            admissionOverView="Admission Overview"
+            news="News & events"
+            support="Learning support"
+          />
       </div>
       <br />
       <ToastContainer />
