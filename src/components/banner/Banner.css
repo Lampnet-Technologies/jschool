@@ -31,13 +31,13 @@
     height: 100vh;
   }
   .banner-content h1 {
-    left: 540px;
+    left: 680px;
     position: absolute;
     top: 400px;
   }
   .banner-play{
     color: white;
-    left: 650px;
+    left: 750px;
     position: absolute;
     top: 340px;
     font-size: 50px;
