@@ -5,6 +5,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 export default function SingleNewsPage() {
   const [singleNewsPost, setSingleNewsPost] = useState(null);
@@ -55,11 +56,7 @@ export default function SingleNewsPage() {
   return (
     <div className="singleNews pages">
       <div className="singleNews--content">
-        <section>
-        <Link to="/news" className="news--link">
-            <FaArrowLeft />
-          </Link>
-          <h4>{singleNewsPost.title}</h4>
+        <section className="single-news-image">
           {singleNewsPost.mainImage && singleNewsPost.mainImage.asset.url && (
             <img
               className="img"
@@ -67,15 +64,22 @@ export default function SingleNewsPage() {
               alt={singleNewsPost.mainImage.alt}
             />
           )}
-          <h3>Onward</h3>
-          <div className="body">
-            <BlockContent
-              blocks={singleNewsPost.body}
-              projectId="qdccjb4j"
-              dataset="production"
-            />
+
+          <div className="single-news-text">
+            <Link to="/news" className="news--link">
+              <FaArrowLeft />
+            </Link>
+            <br />
+            <h4>{singleNewsPost.title}</h4>
+            <br />
+            <div className="body">
+              <BlockContent
+                blocks={singleNewsPost.body}
+                projectId="qdccjb4j"
+                dataset="production"
+              />
+            </div>
           </div>
-          
         </section>
         <section className="News--Events">
           <div className="news--container">
@@ -124,7 +128,11 @@ export default function SingleNewsPage() {
             </Splide>
           </div>
         </section>
+          <Link to="/news" className="link single-news-btn">
+          <button>See all</button>
+        </Link>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -179,6 +179,7 @@ li {
 .desktop .link,
 li {
   color: white !important;
+  font-size: 18px !important;
 }
 .mobile li .link:hover {
   color: #ff2a2a;

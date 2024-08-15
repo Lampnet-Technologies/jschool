@@ -218,21 +218,43 @@ h1 {
 }
 /* Single News Page */
 .singleNews--content {
-  width: 85%;
-  margin: 30px auto;
+  width: 100%;
+ 
+}
+.single-news-text{
+  width: 80%;
+  margin: 50px auto;
 }
 .singleNews--content h3 {
   margin: 10px 0;
 }
-.singleNews--content img {
-  border-radius: 8px;
-  margin-top: 10px;
+.single-news-image img {
+  margin-top: -105px;
+  height: 90vh;
+  object-fit: cover;
 }
 .news--link {
   color: #ff2a2a;
   text-decoration: none;
   cursor: pointer;
   z-index: 4;
+}
+.single-news-btn{
+  display: flex;
+  justify-content: center;
+}
+.single-news-btn button{
+  border: none;
+  background-color: #FEB500;
+  color: white;
+  padding: 12px;
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
 }
 /* Gallery Page */
 .gallery--page--content {
@@ -421,7 +443,7 @@ h1 {
 .contact--location {
   margin-top: 30px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1120px) {
   /* About page section */
   .about--jschool .banner-text {
     width: 80%;
@@ -527,9 +549,10 @@ h1 {
     overflow: hidden;
   }
   /* Single News Page */
-  .singleNews--content {
-    width: 70%;
+  .single-news-image img {
+    height: 100vh;
   }
+
   /* Admission Page */
   /* .admission--content-1 {
     margin: 70px 0;
