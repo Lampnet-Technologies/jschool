@@ -38,7 +38,7 @@
   outline: none;
   border: none;
   background-color: #FEB500;
-  width: 40%;
+  width: 140px;
   padding: 10px;
   border-radius: 5px;
   margin: 20px 0;
@@ -67,9 +67,6 @@
     font-size: 60px !important;
     width: 50%;
   }
-  .whyChooseUs-text button {
-    width: 20%;
-  }
  .whyChooseUs-text .text-content{
     margin-top: 160px !important;
     margin-left: 40px;
@@ -92,9 +89,6 @@
   .whyChooseUs-text h2 {
     font-size: 30px !important;
     width: 70%;
-  }
-  .whyChooseUs-text button {
-    width: 20%;
   }
   .text-content{
     margin-top: 160px !important;

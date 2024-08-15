@@ -519,7 +519,7 @@ export default function HomePage() {
           <div className="parent--card--wrapper">
             <div className="parent--card">
               <div className="parent--img">
-                <img src={RandomImage} alt="" className="img" />
+                <img src={RandomImage} alt="Image" className="img" />
               </div>
               <div className="parent--content">
                 <p>

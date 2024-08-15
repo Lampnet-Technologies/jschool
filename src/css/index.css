@@ -42,12 +42,12 @@ span {
   text-decoration: none;
   cursor: pointer;
 }
-.line {
+/* .line {
   background-color: #ff2a2a;
   width: 80px;
   height: 4px;
   margin: 20px 0;
-}
+} */
 .btn {
   outline: none;
   border: none;
@@ -113,13 +113,13 @@ textarea {
 }
 
 /* Header styling */
-.header--wrapper {
+/* .header--wrapper {
   position: fixed;
   background: transparent;
   width: 100%;
   top: 0;
   z-index: 9;
-}
+} */
 .header {
   margin-top: -10px;
 }
@@ -148,8 +148,8 @@ textarea {
 .menu {
   font-size: 22px;
   font-weight: bold;
-  color: #FEB500;
-  border: 1px solid #FEB500;
+  color: #DE0179;
+  border: 1px solid #DE0179;
   padding: 8px;
   border-radius: 5px;
 }
@@ -170,6 +170,10 @@ textarea {
 }
 .login--desktop {
   display: none;
+}
+.login--mobile button{ 
+  width: 100px !important;
+ margin-left: 50px;
 }
 
 /* NavBar Links styling */
@@ -697,7 +701,7 @@ button {
     display: flex;
     gap: 30px;
     position: relative;
-    right: 160px;
+    right: 170px;
     top: 10px;
   }
   .login--desktop {

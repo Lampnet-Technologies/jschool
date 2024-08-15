@@ -16,11 +16,11 @@
   font-weight: bold;
 }
 .welcome-left button {
-  background: #1593d6;
+  background: #FEB500;
   padding: 10px;
   margin: 20px 0;
   border-radius: 5px;
-  width: 30%;
+  width: 140px;
 }
 .welcome-left button:active {
   background-color: #c84d4d;

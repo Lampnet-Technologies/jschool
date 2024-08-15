@@ -54,13 +54,39 @@
   height: 0;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: rgb(34, 189, 216);
+  }
+  50% {
+    transform: scale(1.12);
+    color: rgb(238, 255, 0);
+  }
+  75% {
+    transform: scale(1.2);
+    color: red;
+  }
+  100% {
+    transform: scale(1);
+    color: white;
+  }
+}
+
 .banner-play {
   color: white;
   left: 170px;
   top: 310px;
   position: absolute;
   font-size: 50px;
+  animation: pulse 2s infinite; /* Apply the pulse animation */
+  padding: 10px; /* Adding padding to see the background color */
+  border-radius: 50%; /* Making it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .banner-link {
   color: white;
 }

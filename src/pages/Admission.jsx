@@ -257,7 +257,7 @@ export default function Admission() {
                   />
                   {errors.name && <p className="error">{errors.name}</p>}
                 </div>
-                <div className="input">
+                <div className="input apply-class">
                   <label htmlFor="applyClass">
                     Apply Class <span>*</span>
                   </label>
