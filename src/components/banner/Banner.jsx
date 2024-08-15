@@ -36,12 +36,11 @@ export default function Banner(props) {
         <button onClick={closeModal}>Close</button>
         <div className="video-container">
           <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/qccyDMZASbA"
-            title="YouTube video player"
+            src="https://www.youtube.com/embed/qccyDMZASbA?autoplay=1&rel=0&modestbranding=1"
+            width="330" 
+            height="220"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
