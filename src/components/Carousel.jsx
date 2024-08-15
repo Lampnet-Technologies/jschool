@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import SliderImage1 from "../assets/images/31.jpg";
-import SliderImage2 from "../assets/images/36.jpg";
-import SliderImage3 from "../assets/images/38.jpg";
-import SliderImage4 from "../assets/images/43.png";
+import SliderImage1 from "../assets/images/Pupil-banner.svg";
+import SliderImage2 from "../assets/images/37.jpg";
+import SliderImage3 from "../assets/images/30.jpg";
+import SliderImage4 from "../assets/images/33.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Typed from "typed.js";

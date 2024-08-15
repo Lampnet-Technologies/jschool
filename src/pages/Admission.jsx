@@ -4,8 +4,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from "../assets/images/34.jpg";
-import { FaPenToSquare } from "react-icons/fa6";
 import { FaArrowRight, FaEnvelope } from "react-icons/fa";
 import Banner from "../components/banner/Banner";
 import BannerImage from "../assets/images/34.jpg";
