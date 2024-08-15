@@ -91,7 +91,7 @@ export default function Header() {
                 <button onClick={closeMenu}>
                   <Link to="/login" className="link login-portal">
                   <FaLock/>
-                    Portal Login
+                    <p>Portal Login</p>
                   </Link>
                 </button>
               </div>

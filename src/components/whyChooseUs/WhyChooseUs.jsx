@@ -62,6 +62,13 @@ export default function WhyChooseUs() {
               state-of-the-art science and computer laboratories, a well-stocked
               library, and other facilities.
             </p>
+            <div className="state-of-art-btn">
+            <button>
+              <Link to='/about' className="link">
+              Learn more
+              </Link>
+            </button>
+          </div>
           </div>
         </div>
 

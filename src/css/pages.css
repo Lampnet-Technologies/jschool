@@ -144,6 +144,21 @@ h1 {
   width: 100%;
   margin-top: 20px;
 }
+.state-of-art-btn button{
+  border: none;
+  background-color: #FEB500;
+  color: white;
+  padding: 12px;
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.state-of-art-btn .link{
+  color: white;
+}
 
   /* Community Section */
   .about-community{
@@ -476,8 +491,12 @@ h1 {
     align-items: center;
     gap: 180px;
   }
+  .state-of-art-left{
+    margin-bottom: 50px;
+  }
   .state-of-art-right {
     width: 40%;
+    margin-left: 40px;
   }
   .state-of-art-right h4 {
     margin-bottom: 20px;
@@ -490,12 +509,13 @@ h1 {
   .image-left {
     height: 450px;
     width: 450px !important;
+    margin-left: -20px !important;
   }
   .image-right {
-    width: 270px !important;
-    height: 270px;
-    right: -100px;
-    bottom: -60px;
+    width: 300px !important;
+    height: 300px !important;
+    right: -150px !important;
+    bottom: -120px;
   }
   .about-info-section {
     display: flex;
@@ -639,7 +659,7 @@ h1 {
 }
 @media screen and (min-width: 760px) {
   /* About page section */
-  .image-left {
+  /* .image-left {
     height: 500px;
     width: 500px !important;
   }
@@ -648,7 +668,7 @@ h1 {
     height: 270px;
     right: 30px;
     bottom: -60px;
-  }
+  } */
   /* Teachers Section */
   .teachers--page--details {
     display: grid;

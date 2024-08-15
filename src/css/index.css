@@ -3,6 +3,24 @@
   padding: 0;
   margin: 0;
 }
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white; 
+  z-index: 9999;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
+}
+
 .pages {
   padding: 78px 0 0;
   overflow: hidden;
@@ -78,7 +96,7 @@ textarea {
   color: white;
   background-color: #ff2a2a;
   padding: 15px;
-  border-radius: 50px;
+  border-radius: 10px;
   font-weight: bold;
   animation: bounce linear 2s infinite;
 }
@@ -130,19 +148,25 @@ textarea {
 .menu {
   font-size: 22px;
   font-weight: bold;
-  color: #ff2a2a;
-  border: 1px solid #ff2a2a;
+  color: #FEB500;
+  border: 1px solid #FEB500;
   padding: 8px;
   border-radius: 5px;
 }
 
 /* Login Links styling */
-.login-portal{
+.portal--btn{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 30px;
+  text-align: center;
+  padding: 5px;
+}
+.login-portal p{
+  margin-top: 5px;
+  font-size: 12px;
 }
 .login--desktop {
   display: none;
