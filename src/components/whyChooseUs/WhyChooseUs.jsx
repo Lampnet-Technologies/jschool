@@ -63,11 +63,11 @@ export default function WhyChooseUs() {
               library, and other facilities.
             </p>
             <div className="state-of-art-btn">
-            <button>
+            {/* <button>
               <Link to='/about' className="link">
               Learn more
               </Link>
-            </button>
+            </button> */}
           </div>
           </div>
         </div>
