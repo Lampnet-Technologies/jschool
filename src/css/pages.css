@@ -232,6 +232,7 @@ h1 {
   color: #ff2a2a;
   text-decoration: none;
   cursor: pointer;
+  z-index: 4;
 }
 /* Gallery Page */
 .gallery--page--content {
