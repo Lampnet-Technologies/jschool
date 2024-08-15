@@ -99,13 +99,13 @@
     height: 100vh;
   }
   .banner-content h1 {
-    left: 680px;
+    left: 720px;
     position: absolute;
     top: 400px;
   }
   .banner-play {
     color: white;
-    left: 750px;
+    left: 780px;
     position: absolute;
     top: 340px;
     font-size: 50px;
