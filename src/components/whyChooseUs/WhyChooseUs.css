@@ -84,8 +84,10 @@
   }
   .whyChooseUs-text p {
     width: 50%;
-    font-size: 15px;
+    font-size: 18px;
     opacity: .8;
+    width: 50%;
+    margin-top: 20px;
   }
   .whyChooseUs-text h2 {
     font-size: 30px !important;
