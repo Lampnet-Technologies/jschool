@@ -67,7 +67,7 @@ export default function Header() {
                       Events & News
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="link" to="/pupil" onClick={closeMenu}>
                       Pupil
                     </Link>
@@ -77,7 +77,7 @@ export default function Header() {
                     <Link className="link" to="/support" onClick={closeMenu}>
                       Student support
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link className="link" to="/contact" onClick={closeMenu}>
                       Contact
@@ -137,7 +137,7 @@ export default function Header() {
                         Events & News
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="link" to="/pupil" onClick={closeMenu}>
                         Pupil
                       </Link>
@@ -147,7 +147,7 @@ export default function Header() {
                       <Link className="link" to="/support" onClick={closeMenu}>
                         Student support
                       </Link>
-                    </li>
+                    </li> */}
 
                     <li>
                       <Link className="link" to="/contact" onClick={closeMenu}>

@@ -228,6 +228,9 @@ li {
 .desktop .more--btn {
   cursor: pointer;
   transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .desktop .more--btn:hover {
   color: #ff2a2a !important;
@@ -236,6 +239,9 @@ li {
   cursor: pointer;
   transition: 0.3s ease;
   color: black !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 /* Login page styling (Universal)*/
 .login--page {
@@ -461,7 +467,8 @@ li {
   object-fit: cover;
   margin: auto;
   display: block;
-  border: 3px solid #ff2a2a;
+  z-index: 5;  border: 3px solid #ff2a2a;
+  position: relative;
 }
 /* Teachers Section */
 .teachers--content {
@@ -697,11 +704,12 @@ button {
     left: -360px;
     top: 10px;
   }
+
   .desktop {
     display: flex;
     gap: 30px;
     position: relative;
-    right: 170px;
+    right: 210px;
     top: 10px;
   }
   .login--desktop {

@@ -18,7 +18,7 @@ export default function Welcome() {
           data-aos-duration="1500"
         >
           <h2>Welcome</h2>
-          <p className="wlcome-school">to JSchool</p>
+          <p className="wlcome-school">to jenny school</p>
           <br />
           <p>
             We are committed to developing outstanding young people with the

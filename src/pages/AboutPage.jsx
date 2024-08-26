@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import Typed from "typed.js";
 import { Link } from "react-router-dom";
 import Banner from "../components/banner/Banner";
-import PrincipleImage from "../assets/images/principle.svg";
+import PrincipleImage from "../assets/images/principle.jpeg";
 import CallToAction from "../components/call-to-action/CallToAction";
 import {
   FaArrowRight,

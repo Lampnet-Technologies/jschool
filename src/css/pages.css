@@ -516,8 +516,8 @@ h1 {
   .image-right {
     width: 300px !important;
     height: 300px !important;
-    right: -150px !important;
-    bottom: -120px;
+    right: -100px !important;
+    bottom: -90px;
   }
   .about-info-section {
     display: flex;

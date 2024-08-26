@@ -73,10 +73,10 @@ const Slider = () => {
             type: "fade",
             rewind: true,
             autoplay: true,
-            interval: 6000,
+            interval: 9000,
             pauseOnHover: false,
             pauseOnFocus: false,
-            speed: 2000,
+            speed: 8000,
             arrows: false,
             pagination: false,
             classes: {

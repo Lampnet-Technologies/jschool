@@ -64,9 +64,10 @@
     }
     .seeForYourSelf-btn button{
         margin: 0;
+        width: 20% !important;
     }
     .seeForYourSelf-btn .view-school-btn{
-        width: 40%;
+        width: 35% !important;
     }
 }
 
