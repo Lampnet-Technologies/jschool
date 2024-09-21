@@ -60,7 +60,7 @@ export default function NewsPage() {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["News and Events", "Blog"],
+      strings: ["News and Events", "Graduation"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -87,6 +87,7 @@ export default function NewsPage() {
                   className="img"
                   alt={post.title}
                 />
+                  <h2>{post.title}</h2>
                 <div className="body">
                   <BlockContent
                     blocks={post.body}
@@ -96,7 +97,7 @@ export default function NewsPage() {
                 </div>
               </div>
               <br />
-              <h2>{post.title}</h2>
+            
               <Link className="news--link" to={`/news/${post.slug.current}`}>
                 See More <FaArrowRight />
               </Link>
