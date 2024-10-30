@@ -99,15 +99,16 @@
     height: 100vh;
   }
   .banner-content h1 {
-    left: 720px;
+    left: 520px;
     position: absolute;
     top: 400px;
+    font-size: 32px !important;
   }
   .banner-play {
     color: white;
-    left: 780px;
+    left: 610px;
     position: absolute;
-    top: 340px;
+    top: 330px;
     font-size: 50px;
   }
 }

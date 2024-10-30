@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import JschLogo from "../assets/images/Jsch Logo.png";
 import { FaChevronDown, FaLock } from "react-icons/fa";
@@ -6,9 +6,12 @@ import { FaChevronDown, FaLock } from "react-icons/fa";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setShowMore(false); // Close dropdown when menu is toggled
   };
 
   const closeMenu = () => {
@@ -18,17 +21,32 @@ export default function Header() {
 
   const handleShowMore = () => {
     setShowMore(!showMore);
+    if (isMenuOpen) setIsMenuOpen(false); // Close main menu if 'More' is opened
   };
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="header--wrapper">
+    <div className="header--wrapper" ref={menuRef}>
       <div className="header">
         <div className="header--content">
           <div className="logo--menu">
             <i className="fa-solid fa-bars menu" onClick={toggleMenu}></i>
           </div>
           <div className="logo">
-            <Link to="/">
+            <Link to="/" onClick={closeMenu}>
               <img src={JschLogo} alt="Logo" className="Jsch--logo" />
             </Link>
           </div>
@@ -48,10 +66,10 @@ export default function Header() {
               </li>
 
               <li onClick={handleShowMore} className="more--btn">
-                More <FaChevronDown />
+                More <FaChevronDown className="chevrondown" />
               </li>
               {showMore && (
-                <ul className="showMore">
+                <ul className="showMore" onClick={closeMenu}>
                   <li>
                     <Link className="link" to="/gallery" onClick={closeMenu}>
                       Gallery
@@ -67,17 +85,6 @@ export default function Header() {
                       Events & News
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link className="link" to="/pupil" onClick={closeMenu}>
-                      Pupil
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link className="link" to="/support" onClick={closeMenu}>
-                      Student support
-                    </Link>
-                  </li> */}
                   <li>
                     <Link className="link" to="/contact" onClick={closeMenu}>
                       Contact
@@ -120,7 +127,7 @@ export default function Header() {
                   More <FaChevronDown />
                 </li>
                 {showMore && (
-                  <ul className="showMore">
+                  <ul className="showMore" onClick={closeMenu}>
                     <li>
                       <Link className="link" to="/gallery" onClick={closeMenu}>
                         Gallery
@@ -137,18 +144,6 @@ export default function Header() {
                         Events & News
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link className="link" to="/pupil" onClick={closeMenu}>
-                        Pupil
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link className="link" to="/support" onClick={closeMenu}>
-                        Student support
-                      </Link>
-                    </li> */}
-
                     <li>
                       <Link className="link" to="/contact" onClick={closeMenu}>
                         Contact

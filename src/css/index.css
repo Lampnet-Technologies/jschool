@@ -144,6 +144,9 @@ textarea {
 .Jsch--logo {
   width: 50px;
   margin-left: 30px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 4px;
 }
 .menu {
   font-size: 22px;
@@ -231,6 +234,10 @@ li {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.more--btn .chevrondown{
+  position: relative;
+  top: 2px;
 }
 .desktop .more--btn:hover {
   color: #ff2a2a !important;
