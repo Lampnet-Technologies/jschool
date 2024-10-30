@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function CallToAction(props) {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   const renderLink = (path, label, className) => {
     return label ? (
       <div className="call-to-action-links">
-        <Link to={path} className="link">
+        <Link to={path} className="link" onClick={scrollToTop}>
           <div className={`apply-action-btn ${className}`}>
             <p>{label}</p>
             <div className="icon">{props.icon}</div>
@@ -26,7 +28,7 @@ export default function CallToAction(props) {
           {renderLink("/gallery", props.tour, "four")}
           {renderLink("/contact", props.contact, "three")}
           {renderLink("/admission", props.apply, "two")}
-          {renderLink("/news", props.news, "four")}
+          {renderLink("/news", props.news, "five")}
           {renderLink("/teacher", props.teacher, "two")}
           {renderLink("/pupil", props.pupil, "")}
           {renderLink("/support", props.support, "three")}

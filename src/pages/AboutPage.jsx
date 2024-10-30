@@ -270,7 +270,7 @@ export default function AboutPage() {
           </section>
           <CallToAction
             icon={<FaArrowRight />}
-            tour="Take a virtual tour"
+            tour="Virtual gallery"
             pupil="Hear from our students"
             contact="Contact us"
             admissionOverView="Admission Overview"

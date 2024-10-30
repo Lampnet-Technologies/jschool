@@ -73,11 +73,15 @@ export default function Footer() {
     }
   }, [errors]);
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <div>
       <div className="footer">
         <div className="footer--container">
+        <Link to='/' onClick={() => { scrollToTop(); }}>
         <img src={JsLogo} className="footer--logo" alt="JSchool logo" />
+        </Link>
           <div className="footer--content">
             {/* <p>
               JSchool is a fully accredited, independent, international school
@@ -114,21 +118,21 @@ export default function Footer() {
                 {/* <Link to="/" className="links">
                   Home
                 </Link> */}
-                <Link to="/about" className="links">
-                  About
-                </Link>
-                <Link to="/contact" className="links">
-                  Contact
-                </Link>
-                <Link to="/gallery" className="links">
-                  Gallery
-                </Link>
-                <Link to="/overview" className="links">
-                  Admission
-                </Link>
-                <Link to="/news" className="links">
-                  News & Events
-                </Link>
+                <Link className="links" to="/about" onClick={() => { scrollToTop(); }}>
+                      About
+                    </Link>
+                <Link className="links" to="/contact" onClick={() => { scrollToTop(); }}>
+                      Contact
+                    </Link>
+                <Link className="links" to="/gallery" onClick={() => { scrollToTop(); }}>
+                      Gallery
+                    </Link>
+                    <Link className="links" to="/admission" onClick={() => { scrollToTop(); }}>
+                      Admission
+                    </Link>
+                    <Link className="links" to="/news" onClick={() => { scrollToTop(); }}>
+                      News & Events
+                    </Link>
                 {/* <Link to="/teachers" className="links">
                   Teachers
                 </Link> */}

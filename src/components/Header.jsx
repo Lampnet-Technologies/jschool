@@ -6,7 +6,7 @@ import { FaChevronDown, FaLock } from "react-icons/fa";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showMore, setShowMore] = useState(false);
-  
+
   const menuRef = useRef(null);
 
   const toggleMenu = () => {
@@ -24,6 +24,8 @@ export default function Header() {
     if (isMenuOpen) setIsMenuOpen(false); // Close main menu if 'More' is opened
   };
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -31,7 +33,7 @@ export default function Header() {
         closeMenu();
       }
     };
-    
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -46,7 +48,7 @@ export default function Header() {
             <i className="fa-solid fa-bars menu" onClick={toggleMenu}></i>
           </div>
           <div className="logo">
-            <Link to="/" onClick={closeMenu}>
+            <Link to="/" onClick={() => { closeMenu(); scrollToTop(); }}>
               <img src={JschLogo} alt="Logo" className="Jsch--logo" />
             </Link>
           </div>
@@ -54,13 +56,13 @@ export default function Header() {
           <nav className="desktop--nav">
             <ul className="desktop">
               <li>
-                <Link className="link" to="/about" onClick={closeMenu}>
+                <Link className="link" to="/about" onClick={() => { closeMenu(); scrollToTop(); }}>
                   About
                 </Link>
               </li>
 
               <li>
-                <Link className="link" to="/admission" onClick={closeMenu}>
+                <Link className="link" to="/admission" onClick={() => { closeMenu(); scrollToTop(); }}>
                   Admission
                 </Link>
               </li>
@@ -71,22 +73,22 @@ export default function Header() {
               {showMore && (
                 <ul className="showMore" onClick={closeMenu}>
                   <li>
-                    <Link className="link" to="/gallery" onClick={closeMenu}>
+                    <Link className="link" to="/gallery" onClick={() => { closeMenu(); scrollToTop(); }}>
                       Gallery
                     </Link>
                   </li>
                   <li>
-                    <Link className="link" to="/teachers" onClick={closeMenu}>
+                    <Link className="link" to="/teachers" onClick={() => { closeMenu(); scrollToTop(); }}>
                       Teachers
                     </Link>
                   </li>
                   <li>
-                    <Link className="link" to="/news" onClick={closeMenu}>
+                    <Link className="link" to="/news" onClick={() => { closeMenu(); scrollToTop(); }}>
                       Events & News
                     </Link>
                   </li>
                   <li>
-                    <Link className="link" to="/contact" onClick={closeMenu}>
+                    <Link className="link" to="/contact" onClick={() => { closeMenu(); scrollToTop(); }}>
                       Contact
                     </Link>
                   </li>
@@ -95,9 +97,9 @@ export default function Header() {
             </ul>
             <div className="login--desktop">
               <div className="portal--btn">
-                <button onClick={closeMenu}>
+                <button onClick={() => { closeMenu(); scrollToTop(); }}>
                   <Link to="/login" className="link login-portal">
-                  <FaLock/>
+                    <FaLock />
                     <p>Portal Login</p>
                   </Link>
                 </button>
@@ -113,12 +115,12 @@ export default function Header() {
               <i className="fa-solid fa-x menu" onClick={toggleMenu}></i>
               <div className="mobile--links">
                 <li>
-                  <Link className="link" to="/about" onClick={closeMenu}>
+                  <Link className="link" to="/about" onClick={() => { closeMenu(); scrollToTop(); }}>
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link className="link" to="/admission" onClick={closeMenu}>
+                  <Link className="link" to="/admission" onClick={() => { closeMenu(); scrollToTop(); }}>
                     Admission
                   </Link>
                 </li>
@@ -129,23 +131,23 @@ export default function Header() {
                 {showMore && (
                   <ul className="showMore" onClick={closeMenu}>
                     <li>
-                      <Link className="link" to="/gallery" onClick={closeMenu}>
+                      <Link className="link" to="/gallery" onClick={() => { closeMenu(); scrollToTop(); }}>
                         Gallery
                       </Link>
                     </li>
                     <li>
-                      <Link className="link" to="/teachers" onClick={closeMenu}>
+                      <Link className="link" to="/teachers" onClick={() => { closeMenu(); scrollToTop(); }}>
                         Teachers
                       </Link>
                     </li>
 
                     <li>
-                      <Link className="link" to="/news" onClick={closeMenu}>
+                      <Link className="link" to="/news" onClick={() => { closeMenu(); scrollToTop(); }}>
                         Events & News
                       </Link>
                     </li>
                     <li>
-                      <Link className="link" to="/contact" onClick={closeMenu}>
+                      <Link className="link" to="/contact" onClick={() => { closeMenu(); scrollToTop(); }}>
                         Contact
                       </Link>
                     </li>
@@ -153,7 +155,7 @@ export default function Header() {
                 )}
                 <div className="login login--mobile">
                   <div className="portal--btn">
-                    <button onClick={closeMenu}>
+                    <button onClick={() => { closeMenu(); scrollToTop(); }}>
                       <Link to="/login" className="link">
                         Portal Login
                       </Link>

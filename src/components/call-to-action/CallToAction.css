@@ -1,6 +1,6 @@
 .call-to-action {
   width: 90%;
-  margin: auto;
+  margin: 40px auto;
 }
 .call-to-action h2 {
   font-weight: 600;
@@ -15,18 +15,22 @@
   align-items: center;
   font-size: 18px;
   color: white;
-  background: #de0179;
+  background: #3F5865;
   padding: 20px;
   margin-bottom: 20px;
+  height: 80px;
 }
 .two {
-  background-color: #f58634;
+  background-color: #B78200;
 }
 .three {
-  background-color: #1593d6;
+  background-color: #196C3A;
 }
 .four {
-  background-color: #153cd6;
+  background-color: #E10605;
+}
+.five {
+  background-color: #E0791F;
 }
 @media screen and (min-width: 1120px) {
   .call-to-action-content{

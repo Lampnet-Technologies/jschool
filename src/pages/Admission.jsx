@@ -453,7 +453,7 @@ export default function Admission() {
         <br />
         <CallToAction
             icon={<FaArrowRight />}
-            tour="Take a virtual tour"
+            tour="Virtual gallery"
             pupil="Hear from our students"
             contact="Contact us"
             admissionOverView="Admission Overview"
