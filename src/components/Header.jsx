@@ -21,8 +21,9 @@ export default function Header() {
 
   const handleShowMore = () => {
     setShowMore(!showMore);
-    if (isMenuOpen) setIsMenuOpen(false); // Close main menu if 'More' is opened
+    // if (isMenuOpen) setIsMenuOpen(false);
   };
+  
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 

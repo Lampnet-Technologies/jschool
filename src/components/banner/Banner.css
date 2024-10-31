@@ -20,7 +20,8 @@
 .banner-content h1 {
   left: 40px;
   position: absolute;
-  bottom: 30px;
+  font-size: 30px !important;
+  bottom: 45px;
 }
 
 .modal {
@@ -91,6 +92,23 @@
   color: white;
 }
 
+
+@media screen and (min-width: 780px) {
+  .banner-content h1 {
+    left: 260px;
+    position: absolute;
+    top: 480px;
+    font-size: 45px !important;
+  }
+  .banner-play {
+    color: white;
+    left: 400px;
+    position: absolute;
+    top: 400px;
+    font-size: 50px;
+  }
+}
+
 @media screen and (min-width: 1120px) {
   .banner-container img {
     height: 100vh;
@@ -99,16 +117,17 @@
     height: 100vh;
   }
   .banner-content h1 {
-    left: 520px;
+    left: 490px;
     position: absolute;
     top: 400px;
-    font-size: 32px !important;
+    font-size: 45px !important;
   }
   .banner-play {
     color: white;
-    left: 610px;
+    left: 615px;
     position: absolute;
-    top: 330px;
+    top: 340px;
     font-size: 50px;
   }
 }
+

@@ -13,7 +13,6 @@ import CallToAction from "../components/call-to-action/CallToAction";
 
 export default function NewsPage() {
   const [posts, setPosts] = useState([]);
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -70,6 +69,13 @@ export default function NewsPage() {
     };
   }, []);
 
+  const getFirstWords = (body, wordCount) => {
+    const allText = body
+      .map((block) => block.children.map((child) => child.text).join(" "))
+      .join(" ");
+    return allText.split(" ").slice(0, wordCount).join(" ") + "...";
+  };
+
   return (
     <div className="pages">
       <Banner title="JSchool News" image={BannerImage} />
@@ -87,17 +93,16 @@ export default function NewsPage() {
                   className="img"
                   alt={post.title}
                 />
-                  <h2>{post.title}</h2>
+                <h2>{post.title}</h2>
                 <div className="body">
                   <BlockContent
-                    blocks={post.body}
+                    blocks={[{ _type: "block", children: [{ text: getFirstWords(post.body, 50) }] }]}
                     projectId="qdccjb4j"
                     dataset="production"
                   />
                 </div>
               </div>
               <br />
-            
               <Link className="news--link" to={`/news/${post.slug.current}`}>
                 See More <FaArrowRight />
               </Link>

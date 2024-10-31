@@ -327,7 +327,7 @@ li {
   position: absolute;
   top: 0;
   width: 100%;
-  padding-top: 520px;
+  padding-top: 440px;
   height: 100vh;
 }
 .slide-text {
@@ -335,7 +335,7 @@ li {
   margin: auto;
 }
 .slide-header h2 {
-  font-size: 25px !important;
+  font-size: 32px !important;
   color: white;
   font-weight: 600;
 }

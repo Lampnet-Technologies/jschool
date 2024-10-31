@@ -28,6 +28,7 @@ export default function TeachersPage() {
     };
   }, []);
   
+  
   return (
     <div className="pages">
        <Banner title= "Our Teachers" image={BannerImage} />
