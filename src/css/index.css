@@ -156,6 +156,12 @@ textarea {
   padding: 8px;
   border-radius: 5px;
 }
+.top-nav{
+  display: flex;
+  align-items: center;
+  margin-left: -40px;
+  gap: 90px;
+}
 
 /* Login Links styling */
 .portal--btn{
@@ -338,6 +344,7 @@ li {
   font-size: 32px !important;
   color: white;
   font-weight: 600;
+  margin-top: 50px;
 }
 .slide-header span {
   color: white;
