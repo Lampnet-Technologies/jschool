@@ -47,6 +47,27 @@
     margin-left: -50px !important;
 }
 
+
+@media screen and (min-width: 765px) {
+    .content-text h1{
+        font-size: 40px !important;
+    }
+    .content-text p{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .seeForYourSelf-container{
+        height: 80vh;
+    }
+    .seeForYourSelf-content{
+        height: 80vh;
+    }
+    .content-text{
+        padding:150px 20px;
+    }
+}
+
 @media screen and (min-width:1120px) {
     .content-text h1{
         font-size: 50px !important;
@@ -68,25 +89,7 @@
     }
     .seeForYourSelf-btn .view-school-btn{
         width: 35% !important;
+        margin: 0 !important;
     }
 }
 
-@media screen and (min-width: 765px) {
-    .content-text h1{
-        font-size: 40px !important;
-    }
-    .content-text p{
-        width: 50%;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-    .seeForYourSelf-container{
-        height: 80vh;
-    }
-    .seeForYourSelf-content{
-        height: 80vh;
-    }
-    .content-text{
-        padding:150px 20px;
-    }
-}
