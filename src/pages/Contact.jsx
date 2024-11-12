@@ -155,7 +155,7 @@ export default function Contact() {
                     {errors.email && <p className="error">{errors.email}</p>}
                   </div>
                 </div>
-                <div className="input">
+                <div className="input subject">
                   <label htmlFor="subject">Subject</label>
                   <br />
                   <input
@@ -179,7 +179,7 @@ export default function Contact() {
                   />
                   {errors.message && <p className="error">{errors.message}</p>}
                 </div>
-                <button type="submit">Send Message</button>
+                <button className="contact-btn" type="submit">Send Message</button>
               </form>
               <ToastContainer />
             </div>

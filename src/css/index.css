@@ -15,6 +15,9 @@
   background: white; 
   z-index: 9999;
 }
+button{
+  font-size: 15px;
+}
 
 .loader img {
   width: 100px;
